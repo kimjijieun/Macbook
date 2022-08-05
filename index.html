@@ -10,9 +10,9 @@
 </head>
 <body>
     <div class="dimmed"></div>
-    <header class="header">
+    <header class="header"><!-- 1024 opacity,scale-->
         <nav class="nav-area">
-            <div class="common-inner1">
+            <div class="common-inner1"> <!-- 체크하기 -->
                 <h1 class="logo"><a href=""><span class="blind">로고</span></a></h1>
                 <ul class="nav-list"> <!-- 마크업 오류 ul,li 이미지가 아닌 txt -->
                     <li class="nav-item"><a href="">스토어</a></li>
@@ -107,17 +107,17 @@
 
 
         <div class="header-bottom"> <!-- 고정 -->
-            <div class="inner0">
+            <div class="inner">
                 <!-- <h3 class="blind">MacBook Air</h3> 같은 이름 두번 나올필요가 없다-->
-                <h3>
+                <h2>
                     <a href="" class="bottom-title">
                         <span class="bottom-name">M1 칩 모델</span>
                         MacBook Air
                     </a>
-                </h3>
+                </h2>
                 
                 <nav>
-                    <em class="menu-item">개요</em> <!-- 다른애들의 제목 느낌이라 em을 준다 -->
+                    <em>개요</em> <!-- 다른애들의 제목 느낌이라 em을 준다 -->
                     <ul class="menu-list">
                         <li class="menu-item"><a href="">Mac을 선택하는 이유</a></li>
                         <li class="menu-item"><a href="">제품사양</a></li>
@@ -154,7 +154,7 @@
                     <!-- <h3 class="title title-normal">MacBook Air</h3> -->
                     <h2 class="title">MacBook Air</h2>
                     <h3 class="sub-title">Air의 흐름을 바꾸다.</h3>
-                    <p class="desc">M1 칩을 탑재한 MacBook Air는 탁월한 휴대성을 자랑하는 노트북입니다. 민첩하고 빠른 성능에 조용한 팬리스 디자인 그리고 아름다운 Retina 디스플레이를 갖추고 있죠. 얇은 두께와 온종일 가는 배터리 덕분에 MacBook Air는 어디든 가볍고 빠르게 들고 다닐 수 있습니다.</p>
+                    <p class="desc desc-super">M1 칩을 탑재한 MacBook Air는 탁월한 휴대성을 자랑하는 노트북입니다. 민첩하고 빠른 성능에 조용한 팬리스 디자인 그리고 아름다운 Retina 디스플레이를 갖추고 있죠. 얇은 두께와 온종일 가는 배터리 덕분에 MacBook Air는 어디든 가볍고 빠르게 들고 다닐 수 있습니다.</p>
                 </div>
                 <div class="equip-area">
                     <img src="./asset/imges/icon/hero_icon__gkgkr96pgb2a_large.jpg" alt="M1 칩">
@@ -189,12 +189,13 @@
             <div class="content-wrapper common-inner2">
                 <section class="content cpu">
                     <h3 class="title title-normal">CPU</h3> <!-- h2까지 필요없음 -->
-    
                     <div class="group-flex">
                         <div class="info-area">
-                            <strong class="headline headline-super">
+                            <strong class="headline headline-super"> 
                                 <span>8코어 CPU</span>
-                                작업은 적극적으로. 배터리 소모는 소극적으로.
+                                작업은 적극적으로. <br><!-- 반응형시 display-none -->
+                                배터리 소모는<br>
+                                소극적으로.
                             </strong>
                             <div class="desc desc-medium">M1 칩의 CPU는 단순히 속도만 놀랍도록 빠른 것이 아닙니다. 고성능 코어와 효율 코어 간 밸런스를 조절해 전에 비해 훨씬 적은 에너지로 일상적인 일들을 순식간에 처리해내죠. 그 엄청난 처리 능력으로 MacBook Air는 전문가급 동영상 편집이나 액션 가득한 최신 게임처럼 높은 사양이 필요한 작업도 척척 해낼 수 있답니다.</div>
                         </div>
@@ -270,7 +271,7 @@
                     </div>
                 </section>
 
-                <div class="grid-box">
+                <div class="grid-box"><!-- 따로 flex가 필요해서 -->
                     <section class="content speed col-6">
                         <h3 class="title title-normal">속도 및 반응성</h3>
                         <div class="group-flex">
@@ -289,7 +290,7 @@
                     </section>
                 </div>
     
-                <div class="grid-box"> <!-- 따로 flex가 필요해서 -->
+                <div class="grid-box"> 
                     <section class="content memory col-4">
                         <h3 class="title title-normal">통합 메모리</h3>
                         <div class="info-area">
@@ -328,7 +329,7 @@
 
 
 
-        <section class="sc-display section"><!-- 클래스section으로 동일하게 주기 편해짐ㅌ -->
+        <section class="sc-display section"><!-- section으로 클래스 동일하게 주기 편해짐ㅌ -->
 
             <div class="common-inner1">
                 <div class="sc-header">
@@ -343,7 +344,7 @@
                 </div>
             </div>
 
-            <div class="common-inner2">
+            <div class="content-wrapper common-inner2">
                 <section class="content color">
                     <h3 class="title">넓은 색영역(P3)</h3>
                     <div class="group-flex">
@@ -381,202 +382,218 @@
 
 <!-- 여기부터 위에랑 비슷하게 수정해보자 -->
         <section class="sc-camera section">
-            <div class="inner1">
-                <div class="manual-preview">
-                    <h3 class="m1-title">
-                    <span>카메라 및 마이크</span>
-                    더 생생하게. 더 또렷하게.</h3>
-                    <p class="imfo-info">M1 칩의 이미지 신호 프로세서는 FaceTime 영상 통화와 화상 회의 시 당신을 언제나 최대한 멋진 모습으로 보여주죠. 그리고 세 개의 내장 마이크는 통화할 때나 받아쓰기할 때, Siri에게 날씨를 물어볼 때도 당신의 말을 또렷하게 전해줍니다.</p>
-                    <div class="part-img-box">
-                        <img src="./asset/imges/contents/camera_hero_hardware__dri77prvl64i_large_2x.jpg" alt="노트북" class="camera-notebook">
-                        <img src="./asset/imges/contents/camera_hero_screen__caeyynhk0daq_large_2x.png" alt="노트북 캠 사진" class="camera-cam">
+            <div class="common-inner1">
+                <div class="sc-header">
+                    <h3 class="sub-title"> <span>카메라 및 마이크</span> 더 생생하게. 더 또렷하게.</h3>
+                    <p class="desc">M1 칩의 이미지 신호 프로세서는 FaceTime 영상 통화와 화상 회의 시 당신을 언제나 최대한 멋진 모습으로 보여주죠. 그리고 세 개의 내장 마이크는 통화할 때나 받아쓰기할 때, Siri에게 날씨를 물어볼 때도 당신의 말을 또렷하게 전해줍니다.</p>
+                    <div class="img-area">
+                        <img src="./asset/imges/contents/camera_hero_hardware__dri77prvl64i_large_2x.jpg" alt="" class="camera-notebook">
+                        <img src="./asset/imges/contents/camera_hero_screen__caeyynhk0daq_large_2x.png" alt="" class="camera-cam">
                     </div>
                 </div>
             </div>
-            <div class="inner2">
-                <div class="manual-detail">
-                    <div class="part-wrap part-FaceTime">
+            <div class="common-inner2">
+                <div class="grid-box">
+                    <section class="content FaceTime col-6">
                         <h3 class="title title-normal">FaceTime HD 카메라</h3>
                         <div class="group-flex">
-                            <div class="part-txt">
-                                <strong class="part-headline">
+                            <div class="info-area">
+                                <div class="desc">
                                     또렷하고 선명한 이미지와 함께 명부와 암부의 놀라운 디테일을 선사합니다. 여기에 얼굴 인식 기능이 Neural Engine을 활용해 톤 매핑과 색 정확도를 높여줘 피부 톤도 훨씬 자연스럽죠.
-                                </strong>
+                                </div>
                             </div>
-                            <div class="part-img-box">
+                            <figure class="img-area"></figure>
+                            <!-- <div class="part-img-box">
                                 <img src="./asset/imges/contents/facetime__bv310lpzvjci_large_2x.png" alt="영상통화하는 사람얼굴">
-                            </div>
+                            </div> -->
                         </div>
-                    </div>
-                    <div class="part-wrap part-mike">
+                    </section>
+                    <section class="content mike col-6">
                         <h3 class="title title-normal">3 마이크 어레이</h3>
-                        <div class="part-txt">
-                            <strong class="part-headline">
+                        <div class="info-area">
+                            <strong class="headline">
                                 통화 시 주변 소음 대신 당신의 목소리에 <br>귀 기울이는 마이크.
                             </strong>
                         </div>
-                        <div class="part-video-box">
-                            <video src="https://www.apple.com/105/media/us/macbook-air-m1/2022/648bb92f-0bb4-452c-bfbc-2898641b22f5/anim/microphones/large.mp4" autoplay>muted </video>
+                        <div class="video-area">
+                            <video autoplay muted class="video">
+                                <source src="https://www.apple.com/105/media/us/macbook-air-m1/2022/648bb92f-0bb4-452c-bfbc-2898641b22f5/anim/microphones/large.mp4" type="video/mp4">
+                            </video>
                         </div>
-                    </div>
+                    </section>
                 </div>
+
             </div>
         </section>
 
         <section class="sc-Keyboard section">
-            <div class="inner1">
-                <div class="manual-preview">
-                    <h3 class="m1-title">
-                        <span>Magic Keyboard</span>
-                        백문이 불여일타.
-                    </h3>
-                    <p class="imfo-info">탁월한 타이핑감에 다양한 기능까지 갖춘, 그야말로 ‘마법’ 같은 키보드. 사전 프로그래밍된 단축키로 여러 유용한 기능을 손쉽게 사용할 수 있습니다. Siri에게 도움을 받고, 키보드 입력 언어를 바꾸고, 상황에 딱 맞는 이모티콘으로 답장을 보내고, Spotlight 기능으로 문서를 찾는 일까지. 탭 한 번으로 정말 수많은 일을 할 수 있죠. 게다가 주변광 센서를 갖춘 백라이트 키 덕분에 조명이 어두운 곳에서도 반짝반짝 타이핑이 수월합니다.</p>
-                    <div class="part-img-box">
+            <div class="common-inner1">
+                <div class="sc-header">
+                    <h3 class="sub-title"> <span>Magic Keyboard</span> 백문이 불여일타. </h3>
+                    <p class="desc">탁월한 타이핑감에 다양한 기능까지 갖춘, 그야말로 ‘마법’ 같은 키보드. 사전 프로그래밍된 단축키로 여러 유용한 기능을 손쉽게 사용할 수 있습니다. Siri에게 도움을 받고, 키보드 입력 언어를 바꾸고, 상황에 딱 맞는 이모티콘으로 답장을 보내고, Spotlight 기능으로 문서를 찾는 일까지. 탭 한 번으로 정말 수많은 일을 할 수 있죠. 게다가 주변광 센서를 갖춘 백라이트 키 덕분에 조명이 어두운 곳에서도 반짝반짝 타이핑이 수월합니다.</p>
+                    <figure class="img-area"></figure>
+                    <!-- <div class="part-img-box">
                         <img src="./asset/imges/contents/magic_keyboard__pewz4toce72a_large_2x.jpg" alt="키보드사진">
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="inner2">
-                <div class="manual-detail">
-                    <div class="part-wrap part-scissors">
+            <div class="content-wrapper common-inner2">
+                <div class="grid-box">
+                    <section class="content mechanism col-6">
                         <h3 class="title title-normal">가위식 메커니즘</h3>
-                        <div class="part-txt">
-                            <p class="imfo-info">
-                                새롭게 다듬어진 가위식 메커니즘이 Mac 노트북에 최고의 타이핑감을 선사합니다.
-                            </p>
+                        <div class="group-flex">
+                            <div class="info-area">
+                                <p class="desc">
+                                    새롭게 다듬어진 가위식 메커니즘이 Mac 노트북에 최고의 타이핑감을 선사합니다.
+                                </p>
+                            </div>
+                            <figure class="img-area"></figure>
+                            <!-- <div class="part-img-box">
+                                <img src="./asset/imges/icon/scissor_mechanism__f050ctxondqy_large_2x.png" alt="키보드 버튼">
+                            </div> -->
                         </div>
-                        <div class="part-img-box">
-                            <img src="./asset/imges/icon/scissor_mechanism__f050ctxondqy_large_2x.png" alt="키보드 버튼">
-                        </div>
-                    </div>
-                    <div class="part-wrap part-Force">
+                    </section>
+                    <section class="content Force col-6">
                         <h3 class="title title-normal">Force Touch 트랙패드</h3>
-                        <div class="part-txt part-half">
-                            <strong class="part-headline">
+                        <div class="info-area">
+                            <strong class="headline">
                                 정교하게 반응하는 널찍한 공간에서 스와이프, 핀치, 줌도 여유 있게.
                             </strong>
                         </div>
-                    </div>
-                    <div class="part-wrap part-touch">
+                        <!-- <figure class="img-area"></figure> -->
+                    </section>
+                    <section class="part-wrap touch">
                         <h3 class="title title-normal">Touch ID</h3>
                         <div class="group-flex">
-                            <div class="part-txt">
-                                <strong class="part-headline">
-                                    MacBook Air를 잠금 해제하는 일, 터치 한 번이면 됩니다. 영화를 대여하거나 앱을 구입할 때, 암호가 걸린 문서를 열 때, 시스템 설정에 접근할 때도 매번 암호를 다시 입력할 필요 없이 지문으로 간단히 사용자 인증을 할 수 있죠.</strong>
+                            <div class="info-area">
+                                <div class="desc">
+                                    MacBook Air를 잠금 해제하는 일, 터치 한 번이면 됩니다. 영화를 대여하거나 앱을 구입할 때, 암호가 걸린 문서를 열 때, 시스템 설정에 접근할 때도 매번 암호를 다시 입력할 필요 없이 지문으로 간단히 사용자 인증을 할 수 있죠.
+                                </div>
                             </div>
-                            <ul class="touch-img-list">
-                                <li class="touch-img-item">
-                                    <div class="part-img-box">
+                            <ul class="touch-list">
+                                <li class="touch-item">
+                                    <!-- <div class="part-img-box">
                                         <img src="./asset/imges/icon/touchid_icon_unlock__dcnpijuk476u_large_2x.png" alt="지문">
-                                    </div>
+                                    </div> -->
+                                    <figure class="img-area"></figure>
                                     <span class="icon-txt">Mac 잠금 해제</span>
                                 </li>
-                                <li class="touch-img-item">
-                                    <div class="part-img-box">
+                                <li class="touch-item">
+                                    <!-- <div class="part-img-box">
                                         <img src="./asset/imges/icon/touchid_icon_appletv__3fs6e8i5vgya_large_2x.png" alt="앱 스토어 아이콘">
-                                    </div>
+                                    </div> -->
+                                    <figure class="img-area"></figure>
                                     <span class="icon-txt">App Store <br>콘텐츠 구매</span>
                                 </li>
-                                <li class="touch-img-item">
-                                    <div class="part-img-box">
+                                <li class="touch-item">
+                                    <!-- <div class="part-box">
                                         <img src="./asset/imges/icon/touchid_icon_protected__c3upubizihw2_large_2x.png" alt="암호 문서">
-                                    </div>
+                                    </div> -->
+                                    <figure class="img-area"></figure>
                                     <span class="icon-txt">암호로 보호된<br> 문서 열기<span>
                                 </li>
-                                <li class="touch-img-item">
-                                    <div class="part-img-box">
+                                <li class="touch-item">
+                                    <!-- <div class="part-box">
                                         <img src="./asset/imges/icon/touchid_icon_appletv__3fs6e8i5vgya_large_2x (1).png" alt="애플티비">
-                                    </div>
+                                    </div> -->
+                                    <figure class="img-area"></figure>
                                     <span class="icon-txt">Apple TV 앱에서<br> 콘텐츠 구매</span>
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </section>
                 </div>
             </div>
         </section>
 
         <section class="sc-connect section">
-            <div class="inner1">
-                <div class="manual-preview">
-                    <h3 class="m1-title">
-                        <span>연결성</span>
-                        충전도, 채팅도, 스트리밍도, 협업도 거뜬하게.
-                    </h3>
-                    <div class="part-img-box">
+            <div class="common-inner1">
+                <div class="sc-header">
+                    <h3 class="title title-normal"> <span>연결성</span> 충전도, 채팅도, 스트리밍도, 협업도 거뜬하게. </h3>
+                    <figure class="img-area"></figure>
+                    <!-- <div class="part-img-box">
                         <img src="./asset/imges/contents/connectivity__e4v0fdp5fjcm_large_2x.jpg" alt="노트북 옆모습">
-                    </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="inner2">
-                <div class="manual-detail">
-                    <div class="part-wrap part-wifi">
-                        <h3 class="title title-normal">Wi-Fi 6</h3>
-                        <div class="part-txt">
-                            <p class="imfo-info">
-                                차세대 Wi-Fi는 단순히 속도만 빠른 것이 아닙니다. 같은 네트워크에 접속하는 기기가 점점 많아져도 MacBook Air의 성능을 그대로 누릴 수 있게 해주는 스마트함까지 갖췄죠.
-                            </p>
-                        </div>
-                        <div class="group-flex">
-                            <div class="part-img-box">
-                                <img src="./asset/imges/icon/wifi__bvw76apdzfiq_large_2x.png" alt="와이파이">
+            <div class="common-inner2">
+                <div class="content-wrapper common-inner2">
+                    <div class="grid-box">
+                        <section class="content wifi col-6">
+                            <h3 class="title title-normal">Wi-Fi 6</h3>
+                            <div class="group-flex">
+                                <div class="desc">
+                                    차세대 Wi-Fi는 단순히 속도만 빠른 것이 아닙니다. 같은 네트워크에 접속하는 기기가 점점 많아져도 MacBook Air의 성능을 그대로 누릴 수 있게 해주는 스마트함까지 갖췄죠.
+                                </div>
                             </div>
-                            <div class="info-top">
+                            <!-- <div class="part-img-box">
+                                <img src="./asset/imges/icon/wifi__bvw76apdzfiq_large_2x.png" alt="와이파이">
+                            </div> -->
+                            <figure class="img-area"></figure>
+                            <div class="info-area">
                                 <span>Wi-Fi 6</span>
                                 최대 1.2Gb/s의 처리량<a href="" class="link-num">4</a>
                             </div>
-                        </div>
-                    </div>
-                    <div class="part-wrap part-thunder">
-                        <h3 class="title title-normal">Thunderbolt</h3>
-                        <div class="part-txt">
-                            <p class="imfo-info">
-                                초고대역폭과 엄청난 범용성의 만남. Thunderbolt 포트 하나로도 데이터 전송, 충전, 화면 출력까지 모두 해결할 수 있습니다. MacBook Air는 이 Thunderbolt 포트를 두 개나 가지고 있죠.
-                            </p>
-                            <ul class="touch-img-list">
-                                <li class="touch-img-item">
-                                    <div class="part-img-box">
-                                        <img src="./asset/imges/icon/thunderbolt_icon_charging__9088ui3etiam_large_2x.png" alt="충전표시 아이콘" class="ic-charge">
-                                    </div>
-                                    <span class="icon-txt">충전</span>
-                                </li>
-                                <li class="touch-img-item">
-                                    <div class="part-img-box ic-display-box">
-                                        <img src="./asset/imges/icon/thunderbolt_icon_display__fc8ygzlxeu62_large_2x.png" alt="외장 디스플레이 아이콘" class="ic-display">
-                                    </div>
-                                    <span class="icon-txt">외장 디스플레이</span>
-                                </li>
-                                <li class="touch-img-item">
-                                    <div class="part-img-box ic-data-box">
-                                        <img src="./asset/imges/icon/thunderbolt_icon_transfer__8tj1fj5cn1eq_large_2x.png" alt="데이터 전송 아이콘" class="ic-data">
-                                    </div>
-                                    <span class="icon-txt">최대 40Gb/s로<br> 데이터 전송 <a href="">4</a></span>
-                                </li>
-                                <li class="touch-img-item">
-                                    <div class="part-img-box ic-link-box">
-                                        <img src="./asset/imges/icon/thunderbolt_icon_connect__p26rhclzsduq_large_2x.png" alt="기기연결 아이콘" class="ic-link">
-                                    </div>
-                                    <span class="icon-txt">기기연결</span>
-                                </li>
-                            </ul>
-                        </div>
+                        </section>
+                        <section class="content thunder col-6">
+                            <h3 class="title title-normal">Thunderbolt</h3>
+                            <div class="group-flex">
+                                <div class="desc">
+                                    초고대역폭과 엄청난 범용성의 만남. Thunderbolt 포트 하나로도 데이터 전송, 충전, 화면 출력까지 모두 해결할 수 있습니다. MacBook Air는 이 Thunderbolt 포트를 두 개나 가지고 있죠.
+                                </div>
+                                <ul class="touch-list">
+                                    <li class="touch-item">
+                                        <!-- <div class="part-box">
+                                            <img src="./asset/imges/icon/thunderbolt_icon_charging__9088ui3etiam_large_2x.png" alt="충전표시 아이콘" class="ic-charge">
+                                        </div> -->
+                                        <figure class="img-area"></figure>
+                                        <span class="icon-txt">충전</span>
+                                    </li>
+                                    <li class="touch-item">
+                                        <!-- <div class="part-box ic-display-box">
+                                            <img src="./asset/imges/icon/thunderbolt_icon_display__fc8ygzlxeu62_large_2x.png" alt="외장 디스플레이 아이콘" class="ic-display">
+                                        </div> -->
+                                        <figure class="img-area"></figure>
+                                        <span class="icon-txt">외장 디스플레이</span>
+                                    </li>
+                                    <li class="touch-item">
+                                        <!-- <div class="part-box ic-data-box">
+                                            <img src="./asset/imges/icon/thunderbolt_icon_transfer__8tj1fj5cn1eq_large_2x.png" alt="데이터 전송 아이콘" class="ic-data">
+                                        </div> -->
+                                        <figure class="img-area"></figure>
+                                        <span class="icon-txt">최대 40Gb/s로<br> 데이터 전송 <a href="">4</a></span>
+                                    </li>
+                                    <li class="touch-item">
+                                        <!-- <div class="part-box ic-link-box">
+                                            <img src="./asset/imges/icon/thunderbolt_icon_connect__p26rhclzsduq_large_2x.png" alt="기기연결 아이콘" class="ic-link">
+                                        </div> -->
+                                        <figure class="img-area"></figure>
+                                        <span class="icon-txt">기기연결</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="sc-recommend">
-            <div class="inner2">
-                <div class="recommend-area">
-                    <h3 class="blind">notebook</h3>
-                    <div class="part-wrap part-os">
-                        <div class="part-txt">
-                            <div class="part-img-box">
+        <section class="sc-recommend section">
+            <div class="content-wrapper common-inner2">
+
+                <section class="content notebook">
+                    <h3 class="title title-normal">notebook</h3>
+                    <div class="group-flex">
+                        <div class="info-area">
+                            <!-- <div class="part-img-box">
                                 <img src="./asset/imges/icon/ar_icon__hvtmrzi5rcia_large_2x.png" alt="3d 아이콘">
-                            </div>
-                            <strong class="part-headline">
-                                당신의 작업공간에 놓인 MacBook Air, AR로 미리 살펴보기.</strong>
-                            <div class="imfo-info">iPhone 또는 iPad에서 이 페이지를 Safari로 열어보세요.</div>
+                            </div> -->
+                            <figure class="img-area"></figure>
+                            <strong class="headline">
+                                당신의 작업공간에 놓인 MacBook Air, AR로 미리 살펴보기.
+                            </strong>
+                            <div class="desc">iPhone 또는 iPad에서 이 페이지를 Safari로 열어보세요.</div>
+
                             <div class="color-icon">
                                 <button class="chk-btn check">
                                     <div class="chk-color">
@@ -600,199 +617,206 @@
                             <img src="./asset/imges/contents/ar_silver__c2t9vh32vus2_large_2x.jpg" alt="실버 노트북" class="notebook-sliver">
                             <img src="./asset/imges/contents/ar_gold__fmrxlx9ex8yi_large_2x.jpg" alt="골드 노트북" class="notebook-gold">
                         </div>
+                        <figure class="img-area">
+                            <div class="notebook-gray"></div>
+                            <div class="notebook-sliver"></div>
+                            <div class="notebook-gold"></div>
+                        </figure>
                     </div>
-                    <div class="part-wrap part-recommend">
+                </section>
+
+                <section class="content compare"><!-- 시작!!!!! -->
+                    <strong class="headline">
+                        당신에게 맞는<br> Mac 노트북은?
+                        <a href="" class="see-more">모든 Mac 모델 비교하기</a>
+                    </strong>
+                    <ul class="recommend-list">
+                        <li class="recommend-item">
+                            <div class="recommend-img-box1">
+                                <img src="./asset/imges/contents/compare_mba__h3jrdtzdcbm2_large_2x.png" alt="MacBook Air,M1칩">
+                            </div>
+                            <div class="recommend-img-box2">
+                                <img src="./asset/imges/icon/compare_3_swatches__cabpgx90hafm_large_2x.png" alt="스페이스 그레이, 실버, 골드 중에서 선택 가능">
+                            </div>
+                            <div class="recommend-info">
+                                <div class="recommend-name">
+                                    <em class="recommend-title">MacBook Air</em >
+                                    <span>M1칩</span>
+                                    <span>₩1,390,000부터<a href="">**</a></span>
+                                </div>
+                                <div class="recommend-desc">
+                                    <span>33.7cm Retina 디스플레이<a href="" class="link-num">5</a></span>
+                                    <span>Apple M1 칩</span>
+                                    <span>최대 16GB 메모리</span>
+                                    <span>최대 2TB 저장 장치<a href="" class="link-num">3</a></span>
+                                    <span>최대 18시간의 배터리 사용 시간<a href="" class="link-num">1</a></span>
+                                    <span>Touch ID</span>
+                                </div>
+                                <a href="" class="m2-more">구입하기</a>
+                            </div>
+                        </li>
+                        <li class="recommend-item">
+                            <div class="recommend-img-box1">
+                                <img src="./asset/imges/contents/compare_mba_m2__e3tzj75hwnqu_large_2x.png" alt="MacBook Air,M2칩">
+                            </div>
+                            <div class="recommend-img-box2">
+                                <img src="./asset/imges/icon/compare_4_swatches__ze6z372x7s2m_large_2x.png" alt="미드나이트, 스타라이트, 스페이스 그레이, 실버 중에서 선택 가능">
+                            </div>
+                            <div class="recommend-info">
+                                <div class="recommend-name">
+                                    <em class="recommend-title new">MacBook Air</em >
+                                    <span>M2칩</span>
+                                    <span>₩1,690,000부터<a href="">**</a></span>
+                                </div>
+                                <div class="recommend-desc">
+                                    <span><span>33.7cm</span> Retina 디스플레이<a href="">5</a></span>
+                                    <span>Apple M2 칩</span>
+                                    <span>최대 24GB 메모리</span>
+                                    <span>최대 2TB 저장 장치<a href="">3</a></span>
+                                    <span>최대 18시간의 배터리 사용 시간<a href="">1</a></span>
+                                    <span>Touch ID</span>
+                                </div>
+                                <a href="" class="m2-more">구입하기</a>
+                            </div>
+                            <a href="" class="see-more">더 알아보기</a>
+                        </li>
+                        <li class="recommend-item">
+                            <div class="recommend-img-box1">
+                                <img src="./asset/imges/contents/compare_mbp_13__9j7gq7j09le6_large_2x.png" alt="MacBook Air,M2칩">
+                            </div>
+                            <div class="recommend-img-box2">
+                                <img src="./asset/imges/icon/compare_2_swatches__6nw2t4qujoii_large_2x.png" alt="스페이스 그레이, 실버 중에서 선택 가능">
+                            </div>
+                            <div class="recommend-info">
+                                <div class="recommend-name">
+                                    <em class="recommend-title new">MacBook Pro 13</em >
+                                    <span>₩1,790,000부터<a href="">**</a></span>
+                                </div>
+                                <div class="recommend-desc">
+                                    <span><span>33.7cm</span> Retina 디스플레이<a href="">5</a></span>
+                                    <span>Apple M2 칩</span>
+                                    <span>최대 24GB 메모리</span>
+                                    <span>최대 2TB 저장 장치<a href="">7</a></span>
+                                    <span>최대 18시간의 배터리 사용 시간<a href="">1</a></span>
+                                    <span>Touch Bar 및 Touch ID</span>
+                                </div>
+                                <a href="" class="m2-more">구입하기</a>
+                            </div>
+                            <a href="" class="see-more">더 알아보기</a>
+                        </li>
+                        <li class="recommend-item">
+                            <div class="recommend-img-box1">
+                                <img src="./asset/imges/contents/compare_mbp_14_16__gb70k890dbe6_large_2x.png" alt="MacBook Air,M2칩">
+                            </div>
+                            <div class="recommend-img-box2">
+                                <img src="./asset/imges/icon/compare_2_swatches__6nw2t4qujoii_large_2x.png" alt="스페이스 그레이, 실버 중에서 선택 가능">
+                            </div>
+                            <div class="recommend-info">
+                                <div class="recommend-name">
+                                    <em class="recommend-title">MacBook Pro 14 및 16</em >
+                                    <span>₩2,690,000부터<a href="">**</a></span>
+                                </div>
+                                <div class="recommend-desc">
+                                    <span><span>35.9cm 또는 41.0cm</span>Liquid Retina XDR<br>디스플레이<a href="">5</a></span>
+                                    <span>Apple M1 Pro 칩 또는 Apple M1 Max 칩</span>
+                                    <span>최대 64GB 메모리</span>
+                                    <span>최대 8TB 저장 장치<a href="">7</a></span>
+                                    <span>최대 21시간의 배터리 사용 시간<a href="">1</a></span>
+                                    <span>Touch ID</span>
+                                </div>
+                                <a href="" class="m2-more">구입하기</a>
+                            </div>
+                            <a href="" class="see-more">더 알아보기</a>
+                        </li>
+                    </ul>
+                </section>
+                <section class="part-wrap part-monterey">
+                    <div class="part-content">
+                        <div class="part-img-box">
+                            <img src="./asset/imges/icon/router_macos_monterey_logo__bl5bc7c0w6aa_large_2x.png" alt="macOS Monterey">
+                        </div>
                         <strong class="part-headline">
-                            당신에게 맞는<br> Mac 노트북은?
-                            <a href="" class="see-more">모든 Mac 모델 비교하기</a>
+                            더욱 반가운 소통을<br> 위한 반가운 기술
                         </strong>
-                        <ul class="recommend-list">
-                            <li class="recommend-item">
-                                <div class="recommend-img-box1">
-                                    <img src="./asset/imges/contents/compare_mba__h3jrdtzdcbm2_large_2x.png" alt="MacBook Air,M1칩">
-                                </div>
-                                <div class="recommend-img-box2">
-                                    <img src="./asset/imges/icon/compare_3_swatches__cabpgx90hafm_large_2x.png" alt="스페이스 그레이, 실버, 골드 중에서 선택 가능">
-                                </div>
-                                <div class="recommend-info">
-                                    <div class="recommend-name">
-                                        <em class="recommend-title">MacBook Air</em >
-                                        <span>M1칩</span>
-                                        <span>₩1,390,000부터<a href="">**</a></span>
-                                    </div>
-                                    <div class="recommend-desc">
-                                        <span>33.7cm Retina 디스플레이<a href="" class="link-num">5</a></span>
-                                        <span>Apple M1 칩</span>
-                                        <span>최대 16GB 메모리</span>
-                                        <span>최대 2TB 저장 장치<a href="" class="link-num">3</a></span>
-                                        <span>최대 18시간의 배터리 사용 시간<a href="" class="link-num">1</a></span>
-                                        <span>Touch ID</span>
-                                    </div>
-                                    <a href="" class="m2-more">구입하기</a>
-                                </div>
-                            </li>
-                            <li class="recommend-item">
-                                <div class="recommend-img-box1">
-                                    <img src="./asset/imges/contents/compare_mba_m2__e3tzj75hwnqu_large_2x.png" alt="MacBook Air,M2칩">
-                                </div>
-                                <div class="recommend-img-box2">
-                                    <img src="./asset/imges/icon/compare_4_swatches__ze6z372x7s2m_large_2x.png" alt="미드나이트, 스타라이트, 스페이스 그레이, 실버 중에서 선택 가능">
-                                </div>
-                                <div class="recommend-info">
-                                    <div class="recommend-name">
-                                        <em class="recommend-title new">MacBook Air</em >
-                                        <span>M2칩</span>
-                                        <span>₩1,690,000부터<a href="">**</a></span>
-                                    </div>
-                                    <div class="recommend-desc">
-                                        <span><span>33.7cm</span> Retina 디스플레이<a href="">5</a></span>
-                                        <span>Apple M2 칩</span>
-                                        <span>최대 24GB 메모리</span>
-                                        <span>최대 2TB 저장 장치<a href="">3</a></span>
-                                        <span>최대 18시간의 배터리 사용 시간<a href="">1</a></span>
-                                        <span>Touch ID</span>
-                                    </div>
-                                    <a href="" class="m2-more">구입하기</a>
-                                </div>
-                                <a href="" class="see-more">더 알아보기</a>
-                            </li>
-                            <li class="recommend-item">
-                                <div class="recommend-img-box1">
-                                    <img src="./asset/imges/contents/compare_mbp_13__9j7gq7j09le6_large_2x.png" alt="MacBook Air,M2칩">
-                                </div>
-                                <div class="recommend-img-box2">
-                                    <img src="./asset/imges/icon/compare_2_swatches__6nw2t4qujoii_large_2x.png" alt="스페이스 그레이, 실버 중에서 선택 가능">
-                                </div>
-                                <div class="recommend-info">
-                                    <div class="recommend-name">
-                                        <em class="recommend-title new">MacBook Pro 13</em >
-                                        <span>₩1,790,000부터<a href="">**</a></span>
-                                    </div>
-                                    <div class="recommend-desc">
-                                        <span><span>33.7cm</span> Retina 디스플레이<a href="">5</a></span>
-                                        <span>Apple M2 칩</span>
-                                        <span>최대 24GB 메모리</span>
-                                        <span>최대 2TB 저장 장치<a href="">7</a></span>
-                                        <span>최대 18시간의 배터리 사용 시간<a href="">1</a></span>
-                                        <span>Touch Bar 및 Touch ID</span>
-                                    </div>
-                                    <a href="" class="m2-more">구입하기</a>
-                                </div>
-                                <a href="" class="see-more">더 알아보기</a>
-                            </li>
-                            <li class="recommend-item">
-                                <div class="recommend-img-box1">
-                                    <img src="./asset/imges/contents/compare_mbp_14_16__gb70k890dbe6_large_2x.png" alt="MacBook Air,M2칩">
-                                </div>
-                                <div class="recommend-img-box2">
-                                    <img src="./asset/imges/icon/compare_2_swatches__6nw2t4qujoii_large_2x.png" alt="스페이스 그레이, 실버 중에서 선택 가능">
-                                </div>
-                                <div class="recommend-info">
-                                    <div class="recommend-name">
-                                        <em class="recommend-title">MacBook Pro 14 및 16</em >
-                                        <span>₩2,690,000부터<a href="">**</a></span>
-                                    </div>
-                                    <div class="recommend-desc">
-                                        <span><span>35.9cm 또는 41.0cm</span>Liquid Retina XDR<br>디스플레이<a href="">5</a></span>
-                                        <span>Apple M1 Pro 칩 또는 Apple M1 Max 칩</span>
-                                        <span>최대 64GB 메모리</span>
-                                        <span>최대 8TB 저장 장치<a href="">7</a></span>
-                                        <span>최대 21시간의 배터리 사용 시간<a href="">1</a></span>
-                                        <span>Touch ID</span>
-                                    </div>
-                                    <a href="" class="m2-more">구입하기</a>
-                                </div>
-                                <a href="" class="see-more">더 알아보기</a>
-                            </li>
-                        </ul>
+                        <a href="" class="see-more">더 알아보기</a>
                     </div>
-                    <div class="part-wrap part-monterey">
-                        <div class="part-content">
-                            <div class="part-img-box">
-                                <img src="./asset/imges/icon/router_macos_monterey_logo__bl5bc7c0w6aa_large_2x.png" alt="macOS Monterey">
-                            </div>
+                </section>    
+                <section class="part-wrap part-accessory">
+                    <div class="part-content">
+                        <h3 class="title title-normal">액세서리</h3>
+                        <div class="part-txt">
                             <strong class="part-headline">
-                                더욱 반가운 소통을<br> 위한 반가운 기술
+                                Mac 액세서리 <br>살펴보기.
                             </strong>
-                            <a href="" class="see-more">더 알아보기</a>
-                        </div>
-                    </div>    
-                    <div class="part-wrap part-accessory">
-                        <div class="part-content">
-                            <h3 class="title title-normal">액세서리</h3>
-                            <div class="part-txt">
-                                <strong class="part-headline">
-                                    Mac 액세서리 <br>살펴보기.
-                                </strong>
-                                <a href="" class="m2-more">쇼핑하기</a>
-                            </div>
-                        </div>
-                        <div class="part-img-box">
-                            <img src="./asset/imges/contents/router_accessories__f5jgzv8ycvqu_large_2x.jpg" alt="부수적인 악세사리">
+                            <a href="" class="m2-more">쇼핑하기</a>
                         </div>
                     </div>
-                    <div class="part-wrap part-continuity">
-                        <div class="part-content">
-                            <h3 class="title title-normal">연속성</h3>
-                            <div class="part-txt">
-                                <strong class="part-headline">
-                                    당신의 모든 기기가<br> 하나처럼 연결된 경험.
-                                </strong>
-                                <p class="part-explain">
-                                    iPhone, iPad, Apple Watch 그리고 Mac은 모두 Apple에서 만들기 때문에 다른 기기에서는 결코 불가능한 방식으로 서로 매끄럽게 연결됩니다.
-                                </p>
-                            </div>
-                            <a href="" class="see-more">더 알아보기</a>
-                        </div>
-                        <div class="part-img-box">
-                            <img src="./asset/imges/contents/router_continuity__euk1phbcdfee_large_2x.jpg" alt="iPhone, iPad, Apple Watch">
-                        </div>
+                    <div class="part-img-box">
+                        <img src="./asset/imges/contents/router_accessories__f5jgzv8ycvqu_large_2x.jpg" alt="부수적인 악세사리">
                     </div>
-                    <div class="part-wrap part-apple">
-                        <div class="part-content">
-                            <h3 class="title title-normal">Apple Trade In</h3>
-                            <div class="part-txt">
-                                <strong class="part-headline">
-                                    새 MacBook Air 구매 시<br> 사용할 수 있는 크레딧을 받는 법.<a href="" class="link-num">9</a>
-                                </strong>
-                                <p class="part-explain">
-                                    보상 판매 대상 컴퓨터를 새 Mac 구매 시 사용할 수 있는 크레딧으로 교환해드립니다. 기기의 가치를 최대한 활용하는 것, 당신은 물론 지구에게도 좋은 일이죠.
-                                </p>
-                            </div>
-                            <a href="" class="see-more">더 알아보기</a>
+                </section>
+                <section class="part-wrap part-continuity">
+                    <div class="part-content">
+                        <h3 class="title title-normal">연속성</h3>
+                        <div class="part-txt">
+                            <strong class="part-headline">
+                                당신의 모든 기기가<br> 하나처럼 연결된 경험.
+                            </strong>
+                            <p class="part-explain">
+                                iPhone, iPad, Apple Watch 그리고 Mac은 모두 Apple에서 만들기 때문에 다른 기기에서는 결코 불가능한 방식으로 서로 매끄럽게 연결됩니다.
+                            </p>
                         </div>
-                        <div class="part-img-box">
-                            <img src="./asset/imges/contents/router_trade_in_macbook_air__f9c0nvzjr36u_large_2x.jpg" alt="MacBook Air ">
-                        </div>
+                        <a href="" class="see-more">더 알아보기</a>
                     </div>
-                    <div class="part-wrap part-education1">
-                        <div class="part-content">
-                            <div class="part-txt">
-                                <strong class="part-headline">
-                                    Apple과 교육
-                                </strong>
-                                <p class="part-explain">
-                                    더 나은 세상을 만들 수 있는 힘을 교육자와 학생들에게.
-                                </p>
-                            </div>
-                            <a href="" class="see-more">더 알아보기</a>
-                        </div>
+                    <div class="part-img-box">
+                        <img src="./asset/imges/contents/router_continuity__euk1phbcdfee_large_2x.jpg" alt="iPhone, iPad, Apple Watch">
                     </div>
-                    <div class="part-wrap part-education2">
-                        <div class="part-content">
-                            <div class="part-txt">
-                                <strong class="part-headline">
-                                    Apple at Work
-                                </strong>
-                                <p class="part-explain">
-                                    비즈니스를 한 단계 더 도약시키는 막강한 힘.
-                                </p>
-                            </div>
-                            <a href="" class="see-more">비즈니스를 위한 제품 쇼핑하기</a>
-                            <a href="" class="see-more">비즈니스를 위한 Mac에 대해 알아보기</a>
+                </section>
+                <section class="part-wrap part-apple">
+                    <div class="part-content">
+                        <h3 class="title title-normal">Apple Trade In</h3>
+                        <div class="part-txt">
+                            <strong class="part-headline">
+                                새 MacBook Air 구매 시<br> 사용할 수 있는 크레딧을 받는 법.<a href="" class="link-num">9</a>
+                            </strong>
+                            <p class="part-explain">
+                                보상 판매 대상 컴퓨터를 새 Mac 구매 시 사용할 수 있는 크레딧으로 교환해드립니다. 기기의 가치를 최대한 활용하는 것, 당신은 물론 지구에게도 좋은 일이죠.
+                            </p>
                         </div>
+                        <a href="" class="see-more">더 알아보기</a>
                     </div>
-                </div>
+                    <div class="part-img-box">
+                        <img src="./asset/imges/contents/router_trade_in_macbook_air__f9c0nvzjr36u_large_2x.jpg" alt="MacBook Air ">
+                    </div>
+                </section>
+                <section class="part-wrap part-education1">
+                    <div class="part-content">
+                        <div class="part-txt">
+                            <strong class="part-headline">
+                                Apple과 교육
+                            </strong>
+                            <p class="part-explain">
+                                더 나은 세상을 만들 수 있는 힘을 교육자와 학생들에게.
+                            </p>
+                        </div>
+                        <a href="" class="see-more">더 알아보기</a>
+                    </div>
+                </section>
+                <section class="part-wrap part-education2">
+                    <div class="part-content">
+                        <div class="part-txt">
+                            <strong class="part-headline">
+                                Apple at Work
+                            </strong>
+                            <p class="part-explain">
+                                비즈니스를 한 단계 더 도약시키는 막강한 힘.
+                            </p>
+                        </div>
+                        <a href="" class="see-more">비즈니스를 위한 제품 쇼핑하기</a>
+                        <a href="" class="see-more">비즈니스를 위한 Mac에 대해 알아보기</a>
+                    </div>
+                </section>
+
             </div>
         </section>
     </main>

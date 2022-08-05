@@ -88,9 +88,20 @@ body.hidden{overflow: hidden;}
 .common-inner2{ max-width: 1390px; padding: 0 24px; margin: 0 auto; }
 
 
+.section{margin-top: 170px;}
 
-
-
+/* common content */
+.section .content{
+    border-radius: 30px;
+    overflow: hidden;
+    background: #ccc;
+    min-height: 700px; 
+    display: flex;
+    flex-direction: column;
+}
+.section .content-wrapper > * + *{margin-top: 24px;}/* gap을 안쓰고하는방법 */
+.section .content > .title{padding: 40px 40px 0;}
+.content .group-flex{ flex: 1;display: flex; align-items: center; }
 
 
 

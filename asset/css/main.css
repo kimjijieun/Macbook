@@ -3,114 +3,77 @@
     overflow: hidden;
     /* padding-top: 110px; */
 }
-.sc-top{margin-top: 170px;}
 
-.container .shop-box{
-    height: 54px;
-    line-height: 54px;
-    box-sizing: border-box;
 
-    font-size: 14px;
-    /* padding: 16px 0; */
-    color: var(--color-white);
-    background: var(--background-color);
-    text-align: center;
-    /* margin: 0 auto; */
-}
 
-.container .shop-box p{display: inline-block;}
-.container .shop-box .link-shop{
-    color: var(--color-link);
-}
-.container .shop-box .link-shop:hover{
-    text-decoration: underline;
-    color: var(--color-link);
-}
-.container .shop-box .link-shop::after{
-    content: '';
-    display: inline-block;
-    margin-left: 3px;
-    text-decoration: none;
-    font-family: var(--font-ic);
-}
+.sc-visual{}
+.sc-visual .video-area{}
+.sc-visual .video-area video{}
 
-.container .sc-air{/* position: relative; */ text-align: center;}
-.sc-air .air-video-box{
-    position: relative;
-    top: 68px;
-    width: 1400px;
-    /* height: 420px; */
-    height: 732px;
-}
-.sc-air .air-video{width: 100%;}
-.container .product-name{
-    margin-top: -200px;
-    font-size: 32px;
-    font-weight: 600;
-    letter-spacing: .004em;
-}
-.container .product-title{
+.sc-visual .info-area{text-align: center;}
+.sc-visual .info-area .title{}
+.sc-visual .info-area .sub-title{
     font-size: 96px;
-    font-weight: 700;
-
-    /* color: #a1a1a6; */
-     /*color: transparent; 본래글자는 투명 */
-    background-clip: text;
-    -webkit-background-clip: text; /* 어디에 그라데이션 */
-    background: radial-gradient(#eff1ff, rgb(26, 3, 3));
+    font-weight: bold;
+    background: radial-gradient(#eff1ff, #000);
     background-size: 100% 200%;
     background-position: 50% 100%;
+    -webkit-background-clip: text; /* 어디에 그라데이션 */
+    background-clip: text;
+    -webkit-text-fill-color: transparent; /* 본래글자는 투명 */
     margin-top: 16px;
     padding-bottom: 12px;
 }
-.container .product-info{
-    font-size: 32px;
-    font-weight: 500;
-    letter-spacing: .004em;
-    margin: 10px 40px 0;
-    line-height: 1.375;
-    color: #a1a1a6;
-}
-.container .sc-air .air-img-box{
-    margin-top: 42px;
-    font-size: 28px;
-    font-weight: 500;
-    letter-spacing: .007em;
-    line-height: 96px;
-    color: #a1a1a6;
-}
-.container .sc-air .air-img-box img{}
-
-.container .product-desc{
-    font-size: 28px;
-    margin: 32px 0 11.2px;
+.sc-visual .info-area .desc{
+    margin-top: 10px;
+    max-width: 900px;
 }
 
-.container .product-desc::after{
-    content: '';
-    display: inline-block;
-    font-family: var(--font-ic);
-    text-decoration: none;
+
+.sc-visual .price-area{}
+.sc-visual .price-area .price{}
+.sc-visual .price-area .link-event{}
+
+
+
+
+
+
+.grid-box{ display: flex; justify-content: space-between; gap: 24px; }
+.grid-box .col-8{width: 80%;}
+.grid-box .col-6{width: 60%;}
+.grid-box .col-4{width: 40%;}
+
+
+
+/* cpu */
+.content.cpu {
+    background: linear-gradient(to right top, #194189 0%, #3B4980 25%, #8738A7 100%);
 }
-.container .product-desc .product-price::after{
-    content: '';
-    display: inline-block;
-    width: 2px;
-    height: 26px;
-    transform: translateY(13%);
-    /* top: 50%; */
-    margin: 0 30px 0;
-    padding: -2px 0 0 0;
-    background: #fff;
-    
+.content.cpu .group-flex > *{flex: 1;} /* 자식들 전체가 반반 */
+/* w100%가 좋을지 한번 비교 */
+.content.cpu .info-area{padding: 0 40px;}
+.content.cpu .headline > span{display: block; color: #C48CFC;}
+.content.cpu .desc{
+    margin-top: 26px;
+    max-width: 470px;
+    word-break: keep-all;
+    font-weight: bold;
 }
-.container .product-watch:hover{
-    text-decoration: underline;
-}
+
+
+/* gpu */
+.content.gpu{position: relative;}
+.content.gpu > *:not(.video-area){z-index: 1;}
+.content.gpu .video-area{position: absolute; top: 0;left: 0;right: 0;bottom: 0; }/* 고정 */
+.content.gpu .video-area video{ width: 100%;height: 100%; object-fit: cover; }
+.content.gpu .info-area {display: flex;align-items: center;}
+.content.gpu .info-area > *{flex: 1;}
+
+
 
 
 /* sc-m1 */
-/* .sc-m1{margin-top: 170px;} */
 .sc-m1 .m1-box{
     width: 169px;height: 79px;
     margin-top: 41px;
