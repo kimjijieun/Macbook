@@ -65,14 +65,14 @@ body.hidden{overflow: hidden;}
 
 /* font-size */
 
-.headline-super{ font-size: 80px; line-height: 1.15; font-weight: 700;}
-.headline-medium{ font-size: 56px; }
+.headline-super{ font-size: 80px; line-height: 1.15; font-weight: 700; word-break: keep-all;}
+.headline-medium{ font-size: 56px; word-break: keep-all;}
 
-.desc-super{ font-size: 32px; line-height: 1.375;}
-.desc-large{ font-size: 28px; line-height: 1.25;}
-.desc-medium{ font-size: 19px; line-height: 1.52632;}
+.desc-super{ font-size: 32px; line-height: 1.375;word-break: keep-all;}
+.desc-large{ font-size: 28px; line-height: 1.25;word-break: keep-all;}
+.desc-medium{ font-size: 19px; line-height: 1.52632;word-break: keep-all;}
 
-.title-normal{ font-size: 21px; }
+.title-normal{ font-size: 21px; font-weight: 600;}
 
 /* 80* headline-super
 56* headline-medium
@@ -102,7 +102,6 @@ body.hidden{overflow: hidden;}
 .section .content-wrapper > * + *{margin-top: 24px;}/* gap을 안쓰고하는방법 */
 .section .content > .title{padding: 40px 40px 0;}
 .content .group-flex{ flex: 1;display: flex; align-items: center; }
-
 
 
 

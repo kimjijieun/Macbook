@@ -12,7 +12,7 @@ $(function(){
 
 
 // 검색 버튼을 누를시 글자가 하나씩 나타났다가 사라진다
-    $('.ic-search').click(function(e){
+    $('.link-search').click(function(e){
         e.preventDefault();
         $('.search-area, .dimmed, .header .nav-list').addClass('active');
 
@@ -92,11 +92,11 @@ $(function(){
     })
 
 
-    // part-speed
-    gsap.to('.part-speed .speedOn',{
+    // speed
+    gsap.to('.content.speed .speedOn',{
         // y:-180 픽셀
         scrollTrigger:{
-            trigger:".part-speed",
+            trigger:".speed",
             start:"top 70%",
             end: "50% top",
             // markers:true,
