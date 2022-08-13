@@ -108,10 +108,10 @@ $(function(){
 
 
     // .sc-display 노트북 채워지기
-    gsap.to('.sc-display .product-img-box',{
+    gsap.to('.sc-display .img-area',{
         // y:-180 픽셀
         scrollTrigger:{
-            trigger:".product-img-box",
+            trigger:".img-area",
             start:"top 90%",
             end: "20% top",
             markers:true,

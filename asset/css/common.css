@@ -20,16 +20,6 @@ body{
 body.hidden{overflow: hidden;}
 
 
-.link-num{
-    font-size: 0.5em;
-    display: inline-block;
-    position: relative;
-    vertical-align: super;
-    /* padding-top: 4px; */
-}
-.link-num:hover{
-    text-decoration: none;
-}
 
 .m1-more{
     background-color: transparent;
@@ -72,7 +62,7 @@ body.hidden{overflow: hidden;}
 .desc-large{ font-size: 28px; line-height: 1.25;word-break: keep-all;}
 .desc-medium{ font-size: 19px; line-height: 1.52632;word-break: keep-all;}
 
-.title-normal{ font-size: 21px; font-weight: 600;}
+.title-normal{ font-size: 21px; font-weight: 600;margin-bottom: 0.4em;}
 
 /* 80* headline-super
 56* headline-medium
@@ -89,6 +79,8 @@ body.hidden{overflow: hidden;}
 
 
 .section{margin-top: 170px;}
+.sc-header{padding-top: 41px;}
+
 
 /* common content */
 .section .content{
@@ -103,8 +95,34 @@ body.hidden{overflow: hidden;}
 .section .content > .title{padding: 40px 40px 0;}
 .content .group-flex{ flex: 1;display: flex; align-items: center; }
 
+.link-target{
+    font-size: 0.5em;
+    display: inline-block;
+    vertical-align: super;
+}
+.link-target:hover{
+    color: var(--color-link);
+}
+
+.link-detail{
+    background-color: transparent;
+    border: 2px solid;
+    border-radius: 100px;
+    padding: 9px 17px;
+    font-weight: 600;
+    white-space: normal;
+
+}
 
 
+
+/* .content.cpu .group-flex > *{flex: 1;}
+.content.gpu .info-area {
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    justify-content: space-between;
+} */
 
 
 
