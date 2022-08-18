@@ -21,7 +21,7 @@ body.hidden{overflow: hidden;}
 
 
 
-.m1-more{
+/* .m1-more{
     background-color: transparent;
     border: 2px solid;
     border-radius: 100px;
@@ -38,7 +38,7 @@ body.hidden{overflow: hidden;}
     white-space: normal;
     margin-top: 20px;
     background: #0071e3;
-}
+} */
 
 
 .blind{
@@ -75,7 +75,7 @@ body.hidden{overflow: hidden;}
 
 /* layout */
 .common-inner1{ max-width: 980px; margin: 0 auto; }
-.common-inner2{ max-width: 1390px; padding: 0 24px; margin: 0 auto; }
+.common-inner2{ max-width: 1390px; /* padding: 0 24px; */ margin: 0 auto; }
 
 
 .section{margin-top: 170px;}
@@ -91,9 +91,19 @@ body.hidden{overflow: hidden;}
     display: flex;
     flex-direction: column;
 }
+.section .content2{
+    border-radius: 30px;
+    overflow: hidden;
+    background: #ccc;
+    min-height: 599px; 
+    display: flex;
+    flex-direction: column;
+}
 .section .content-wrapper > * + *{margin-top: 24px;}/* gap을 안쓰고하는방법 */
 .section .content > .title{padding: 40px 40px 0;}
 .content .group-flex{ flex: 1;display: flex; align-items: center; }
+.section .content2 > .title{padding: 40px 40px 0;}
+.content2 .group-flex{ flex: 1;display: flex; align-items: center; }
 
 .link-target{
     font-size: 0.5em;
@@ -113,7 +123,17 @@ body.hidden{overflow: hidden;}
     white-space: normal;
 
 }
-
+.link-more{color: var(--color-link);}
+.link-more::after{
+    content: '';
+    display: inline-block;
+    /* margin-left: 3px; */
+    padding-left: 0.3em;
+    top: -0.08em;
+    text-decoration: none;
+    font-family: "sf-pro-icons";
+}
+.link-more:hover{text-decoration: underline;}
 
 
 /* .content.cpu .group-flex > *{flex: 1;}
