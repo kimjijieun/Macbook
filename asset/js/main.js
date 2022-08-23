@@ -41,65 +41,34 @@ $(function(){
         $('body').removeClass('hidden');
     })
 
-    //   칩 하나에 담은 거대한 도약.ㅂ분
-    gsap.to('.sc-m1 .m1-video-box',{
-
-        scrollTrigger:{
-            trigger:".m1-video-box", //총구,기준태그
-            start:"top 80%", //(트리거기준, 윈도우기준)
-            end: "bottom top", //(트리거기준, 윈도우기준)
-            // markers:true, //좌표
-            scrub:1,
-        },
-
-        // video: autoplay
-    })
 
 
-    // 7코어 GPU
-    gsap.to('.sc-part .part-video-box',{
+
+
+    // battery 온종일 가는 배터리
+    gsap.to('.content.battery .headline',{
         // y:-180 픽셀
         scrollTrigger:{
-            trigger:".part-video-box",
-            start:"top 80%",
-            end: "bottom top",
-            // markers:true,
-            scrub:1,
+            trigger:".battery",//총구,기준태그
+            start:"top 70%",//(트리거기준, 윈도우기준)
+            end: "50% bottom",//(트리거기준, 윈도우기준)
+            // markers:true,//좌표
+            // scrub:1,
         },
 
-        // video: autoplay
+        // Animation: running;
+        
     })
 
 
-    // 글자 채워지기
-    $(window).scroll(function(){
-        // if ( $('.sc-part .part-battery').offset().top.scrollTop()) {
-        //     $('.part-battery .part-headline').addClass('animation');
-        // }
-        // a = $('.sc-part .part-battery').offset().top;
-        // $('.part-battery .part-headline').addClass('animation')
-    
-        gsap.to('.sc-part .part-txt',{
-            // y:-180 픽셀
-            scrollTrigger:{
-                trigger:".part-txt",
-                start:"top 70%",
-                end: "bottom top",
-                // markers:true,
-                // scrub:1,
-            },
-        })
-    })
-
-
-    // speed
+    // speed 속도 및 반응성
     gsap.to('.content.speed .speedOn',{
         // y:-180 픽셀
         scrollTrigger:{
-            trigger:".speed",
-            start:"top 70%",
-            end: "50% top",
-            // markers:true,
+            trigger:".speed",//총구,기준태그
+            start:"top 40%",//(트리거기준, 윈도우기준)
+            end: "50% top",//(트리거기준, 윈도우기준)
+            // markers:true,//좌표
             // scrub:1,
         },
 
@@ -111,8 +80,23 @@ $(function(){
     gsap.to('.sc-display .img-area',{
         // y:-180 픽셀
         scrollTrigger:{
-            trigger:".img-area",
-            start:"top 90%",
+            trigger:".sc-display .img-area",
+            start:"top 75%",
+            end: "20% top",
+            // markers:true,
+            // scrub:1,
+        },
+
+        opacity: 1
+    })
+
+
+    // .sc-display 노트북 채워지기
+    gsap.to('.sc-camera .camera-cam',{
+        // y:-180 픽셀
+        scrollTrigger:{
+            trigger:".camera-cam",
+            start:"top 75%",
             end: "20% top",
             markers:true,
             // scrub:1,

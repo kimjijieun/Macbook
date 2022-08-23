@@ -258,6 +258,8 @@
     background-clip: text;
     /* text-fill-color: transparent; */
     -webkit-text-fill-color: transparent;
+
+    animation-play-state: paused;
 }
 
 @keyframes battery {
@@ -812,6 +814,7 @@
     left: 50%;
     transform: translateX(-50%);
     margin: 70px 0;
+    transition: opacity 0.4s;
     opacity: 0.2;
 }
 .sc-display .sc-header .img-area .frame{
@@ -997,6 +1000,9 @@
     top: 4.5%;
     width: 1075px;
     height: 100%;
+
+    transition: opacity 0.4s;
+    opacity: 0.2;
 }
 
 
