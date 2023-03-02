@@ -158,16 +158,20 @@
     z-index: 1;
 }
 .sc-chip .sc-header .video-area{
-    
-}
-.sc-chip .sc-header .video-area .video{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     margin-top: -158px;
     /* z-index: -1; */
 
     width: 1754px;
     height: 1056px;
 
-    position: relative;
+}
+.sc-chip .sc-header .video-area .video{
+    
+
+    position: absolute;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -184,6 +188,7 @@
 /* w100%가 좋을지 한번 비교 */
 .content.cpu .info-area{padding: 0 40px;}
 .content.cpu .headline > span{display: block; color: #C48CFC;}
+.content.cpu .headline .br{display: none;}
 .content.cpu .desc{
     margin-top: 26px;
     max-width: 470px;
@@ -250,7 +255,7 @@
     margin: 0 auto;
 }
 .content.battery .headline{
-    animation: battery 1.5s linear forwards;
+    /* animation: battery 1.5s linear forwards; */
 
     background: linear-gradient(to top, #4cd265 50%, #fff 50%);
     background-size: auto 200%;
@@ -259,7 +264,7 @@
     /* text-fill-color: transparent; */
     -webkit-text-fill-color: transparent;
 
-    animation-play-state: paused;
+    /* animation-play-state: paused; */
 }
 
 @keyframes battery {
@@ -279,6 +284,13 @@
         background-position: center 100%;
     }
 }
+.content.battery .headline.add{
+    background-position: center 100%;
+    transition: all 1s linear;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
 .content.battery .link-target{
     font-size: 0.5em;
     display: inline-block;
@@ -537,9 +549,9 @@
     background-size: 800px 1152px;
     background-position: 0px 0px;
 
-    animation: unlock 6s forwards;
-    animation-duration: 72s;/* 얼마동안 */
-    animation-iteration-count: initial; /* 무한반복 */
+    /* animation: unlock 6s forwards; */
+    /* animation-duration: 72s; */
+    /* animation-iteration-count: initial; 무한반복 */
 }
 @keyframes unlock {
     0% {
@@ -778,8 +790,33 @@
     text-align: center;
 }
 .content.security .part-desc{margin-top: 0.5em;}
+.content.security .part-desc .dot{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: var(--color-gray);
+    border-radius: 50%;
+}
+.content.security .part-desc .dot+.dot{margin-left: 10px;}
+.content.security .part-desc .word{
+    display: inline-block;
+    opacity: 0;
+}
+.content.security .part-desc .word+.word{margin-left: -10px;}
 .content.security .part-desc span:nth-child(2){
     display: block;
+    position: relative;
+}
+.content.security .part-desc span:nth-child(3){
+    display: block;
+    position: relative;
+}
+.content.security .part-desc .word-box{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
 }
 .content.security .link-detail{
     margin: 0 40px 40px 40px;
@@ -842,10 +879,20 @@
 
 /* color */
 .content.color{
-    background: url(../imges/contents/color_bg__gluvmsph8ymy_large_2x.jpg) no-repeat;
-    background-size: 100%;
+    position: relative;
 }
-.content.color .group-flex{}
+.content.color .title{
+    z-index: 1;
+}
+.content.color .img-area{
+    width: 100%;height: 100%;
+    background: url(../imges/contents/color_bg__gluvmsph8ymy_large_2x.jpg) no-repeat center;
+    background-size: cover;
+
+    position: absolute;
+    top: 0;left: 0;
+}
+.content.color .group-flex{z-index: 1;}
 .content.color .info-area{
     flex: 1;
     display: flex;
@@ -896,8 +943,8 @@
 
 /* Tone */
 .content.Tone{
-    background: url(../imges/contents/truetone_cold_bg__fyyezp7mcve6_large_2x.jpg) no-repeat;
-    background-size: 100%;
+    background: url(../imges/contents/truetone_cold_bg__fyyezp7mcve6_large_2x.jpg) no-repeat center;
+    background-size: cover;
     /* opacity: 0; */
     position: relative;
     justify-content: space-between;
@@ -939,11 +986,12 @@
     top: 0;
     left: 0;
     opacity: 0;
-    height: 700px;
+    /* height: 700px; */
     display: block;
     width: 100%;
+    height: 100%;
 
-    animation: fadeOut 1s ease-in forwards;
+    /* animation: fadeOut 1s ease-in forwards; */
 }
 
 @keyframes fadeOut {
@@ -1078,6 +1126,7 @@
     color: var(--color-gray);
     display: block;
 }
+.sc-Keyboard .sub-title span br{display: none;}
 .sc-Keyboard .sc-header .desc{
     color: var(--color-gray);
     font-weight: 500;
@@ -1149,6 +1198,7 @@
     font-weight: 700;
     line-height: 1.2;
 }
+.content.Force .headline br{display: none;}
 
 
 
@@ -1316,7 +1366,7 @@
     max-width: 450px;
     margin-top: 0.77em;
     font-weight: 500;
-    padding-left: 40px;
+    padding: 0 40px;
 }
 
 .content.thunder .touch-list{
@@ -1418,6 +1468,7 @@
     font-weight: 700;
     display: block;
 }
+.content.notebook .headline br{display: none;}
 .content.notebook .desc{
     font-size: 17px;
     max-width: 270px;
@@ -1453,6 +1504,7 @@
 .content.notebook .chk-btn:hover{
     border-color: #424245;
 }
+
 .content.notebook .chk-btn.check{
     border: 1px solid #0071e3;
     color: #f5f5f7;
@@ -1460,6 +1512,8 @@
 .content.notebook .chk-btn.check .chk-txt{
     display: inline-block;
 }
+
+
 .content.notebook .chk-color{
     width: 28px;
     height: 28px;
@@ -1489,6 +1543,9 @@
     height: 551px;
     margin-top: 48px;
 }
+.content.notebook .img-area .book-img{
+    display: none;
+}
 .content.notebook .img-area .notebook-gray{
     background: url(../imges/contents/ar_spacegray__zknfcsjq0lu6_large_2x.jpg)no-repeat;
     background-size: 100%;
@@ -1500,7 +1557,7 @@
     height: 551px;
 }
 .content.notebook .img-area .notebook-sliver{
-    background: url(../imges/contents/ar_silver__c2t9vh32vus2_large_2x.jpg)no-repeat;
+    background: url(../imges/contents/ar_silver__c2t9vh22vus2_large_2x.jpg)no-repeat;
     background-size: 100%;
     
     position: absolute;
@@ -1508,6 +1565,8 @@
     left: 0;
     width: 405px;
     height: 551px;
+
+    /* display: none; */
 }
 .content.notebook .img-area .notebook-gold{
     background: url(../imges/contents/ar_gold__fmrxlx9ex8yi_large_2x.jpg)no-repeat;
@@ -1518,6 +1577,14 @@
     left: 0;
     width: 405px;
     height: 551px;
+
+    /* display: none; */
+}
+.content.notebook .img-area .book-img.check{
+    display: block;
+}
+.content.notebook .chk-btn.check .book-img.check{
+    display: block;
 }
 
 
@@ -1563,6 +1630,7 @@
     margin-top: 0.8em;
     font-size: 14px;
 }
+.content.compare .compare-item br{display: none;}
 .content.compare .compare-item:last-child{
     margin-top: 0;
 }
@@ -1923,88 +1991,573 @@
 
 @media screen and (max-width: 1068px) {
     /* *1024을 기준으로 화면을 보고 잡아야함 */ 
-
-    .sc-air .air-video-box{
-        top: 44px;
+    .container .common-inner1{
+        width: 692px;
+        margin: 0 auto;
+    }
+    .sc-visual .video-area{
         width: 1000px;
         height: 300px;
-        }
-        .container .product-name{
-            margin-top: 98px;
-            font-size: 28px;
-        }
-        .container .product-title{
-            font-size: 80px;
-        }
-        .container .product-info{
-            font-size: 28px;
-            word-break: keep-all;
-            margin: 2px 0 0;
-        }
-        .container .sc-air .air-img-box{
-            margin-top: 27px;
-            font-size: 24px;
-        }
-        .container .product-desc{font-size: 24px;}
-        .sc-m1 .m1-box{
-            width: 136px;
-            height: 64px;
-        }
-        .m1-title{
-            font-size: 64px;
-            padding-top: 0;
-        }
-        .sc-m1 .product-info{
-            font-size: 24px;
-            margin-top: 19.2px;
-            max-width: 91%;
-        }
-        .sc-m1 .m1-video-box{
-            margin-top: -96px;
-            width: 1068px;
-            height: 840px;
-        }
-        .sc-m1 .m1-video-box video{height: 100%;}
-        .part-wrap{
-            min-height: 680px;
-            box-sizing: border-box;
-            border-radius: var(--box-border-radius2);
-        }
-        .part-wrap .part-txt .part-info {
-            margin: 23px 0 0;
-            max-width: 400px;
-        }
-        .part-wrap .part-img-box{
-            width: 516px;
-            height: 508px;
-        }
-        .part-wrap .part-img-box img{height: 100%;}
-        .gpu-wrap .part-txt{font-size: 64px;}
-        .gpu-wrap .part-txt .part-headline {
-            word-break: keep-all;
-        }
-        .gpu-wrap .part-video-box{height: 100%;}
-        .sc-part .part-battery{
-            width: calc((100% - 24px) / 2);
-        }
-        .part-battery .part-txt{
-            font-size: 64px;
-            width: 70%;
-        }
-        .sc-part .part-fever{
-            width: calc((100% - 24px) / 2);
-        }
-        .part-wrap .part-txt{font-size: 64px;}
+        top: 44px;
+        /* left: 130px; */
+    }
+    .sc-visual .video-area video{width: 100%;}
+    .sc-visual .info-area{margin-top: 117px;}
+    .sc-visual .info-area .title{
+        font-size: 28px;
+        line-height: 1.25;
+        font-weight: 600;
+        letter-spacing: .007em;
+    }
+    .sc-visual .info-area .sub-title{
+        line-height: 1.15;
+        /* letter-spacing: 0em; */
+        margin-top: 12px;
+        font-size: 80px;
+    }
+    .sc-visual .info-area .desc{
+        font-size: 28px;
+        margin: 2px 0 0;
+        line-height: 1.39286;
+        letter-spacing: .007em;
+    }
+    .sc-visual .info-area .desc br{display: none;}
+    .sc-visual .equip-area{margin-top: 27px;}
+    .sc-visual .equip-area .desc{font-size: 24px;}
+    .sc-visual .price-area{font-size: 24px;}
+    .sc-visual .price-area .price::after{
+        width: 2px;
+        height: 21px;
+    }
 
+    .sc-chip .sc-header{padding-top: 41px;}
+    .sc-chip .sc-header .info-area .img-area{
+        width: 136px;
+        height: 64px;
+    }
+    .sc-chip .sc-header .info-area .sup-title{font-size: 64px;}
+    .sc-chip .sc-header .info-area .desc{
+        font-size: 24px;
+        letter-spacing: .00em;
+        max-width: 92%;
+        line-height: 1.29167;
+        word-break: break-word;
+
+    }
+    .sc-chip .sc-header .video-area{
+        width: 1068px;
+        height: 840px;
+        margin-top: -96px;
+        /* margin-bottom: 75px; */
+    }
+    .sc-chip .sc-header .video-area .video{
+        height: 100%;
+    }
+
+    .content.cpu .desc{
+        margin-top: 23px;
+        max-width: 400px;
+    }
+    .content.cpu .img-area{
+        width: 516px;
+        height: 508px;
+        background-size: cover;
+    }
+    .content.cpu .headline .br{display: block;}
+    .content.gpu .desc{
+        letter-spacing: .012em;
+        margin-right: 0;
+    }
+
+    .grid-box .col-8{width: 60%;}
+    .content.battery .info-area{
+        margin: 45px 0;
+        padding: 0 40px;
+        width: auto;
+    }
+    .content.battery .headline br{display: none;}
+    .content.fever.col-4{width: 60%;}
+    .content.running .group-flex{position: relative;}
+    .content.running .info-area{
+        position: absolute;
+        left: 50%;
+    }
+    .content.running .desc{font-size: 28px;}
+    .content.running .img-area{
+        width: 635px;
+        height: 507px;
+        background-size: cover;
+        position: absolute;
+        right: 50%;
+    }
+    .content.macos .info-area{
+        max-width: 400px;
+    }
+    .content.macos .headline{
+        max-width: 320px;
+        font-size: 40px;
+    }
+    .content.macos .desc{margin-top: 23px;}
+    .content.macos .img-area{
+        background: url(../imges/contents/macos__kp74urneu7u6_medium.png);
+        width: 592px;
+        height: 469px;
+        background-size: cover;
+    }
+    .content.speed .info-area{margin-top: 19px;}
+    .content.speed .info-area .desc{line-height: 1.52632;}
+    .content.speed .info-area .desc br{display: none;}
+    .content.speed .headline{max-width: 320px;}
+    .content.app .info-area{margin-top: 19px;}
+    .content.app .img-area{
+        background: url(../imges/contents/macos_apps__bxvx8h1jtfde_medium.png)no-repeat;
+        width: 341px;
+        height: 274px;
+        background-size: 100%;
+    }
+    .grid-box.memory-box{display: block;}
+    .content.memory{
+        width: calc(50% - 14px);
+        display: inline-block;
+        background-size: 100%;
+        margin-right: 24px;
+        position: relative;
+    }
+    .content.memory .group-flex{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .content.security{
+        width: 100%;
+        margin-top: 24px;
+    }
+    .content.memory .desc{font-size: 24px;}
+    .content.ssd{
+        width: calc(50% - 14px);
+        display: inline-block;
+        position: relative;
+    }
+    .content.ssd .info-area{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .content.security .info-area{font-size: 64px;}
+
+    .sc-display .sc-header .desc{
+        font-size: 24px;
+        max-width: 91.66667%;
+    }
+    .sc-display .sc-header .img-area .frame{
+        width: 849px;
+        height: 500px;
+    }
+    .sc-display .sc-header .img-area .display{
+        width: 657px;
+        height: 411px;
+        top: 33px;
+    }
+    .sc-display .sc-header .img-area{
+        width: 849px;
+        height: 500px;
+    }
+    .content.color .desc{font-size: 24px;}
+    .content.color .desc em{font-size: 96px;}
+    .content.color .desc .percent{font-size: 64px;}
+    .content.color .img-area{
+        background: url(../imges/contents/color_bg__gluvmsph8ymy_medium.jpg);
+    }
+
+    .content.pixel .img-area{
+        width: 290px;
+        height: 132px;
+    }
+    .content.pixel .headline{
+        font-size: 64px;
+        margin-left: 20px;
+    }
+    .content.Tone .desc{
+        font-size: 28px;
+        line-height: 1.25;
+    }
+    .content.Tone .desc span{display: block;}
+    .content.Tone .img-area{
+        width: 247px;
+        height: 247px;
+        margin-top: 30px;
+    }
+    .sc-camera .sc-header .desc{
+        max-width: 91.66667%;
+        line-height: 1.29167;
+    }
+    .sc-camera .sc-header .img-area{
+        margin: 0;
+        width: 800px;
+        height: 478px;
+    }
+    .sc-camera .sc-header .img-area .camera-notebook{
+        background: url(../imges/contents/camera_hero_hardware__dri77prvl64i_medium.jpg);
+        width: 800px;
+        height: 478px;
+    }
+    .sc-camera .sc-header .img-area .camera-cam{
+        background: url(../imges/contents/camera_hero_screen__caeyynhk0daq_medium.png)no-repeat;
+        width: 750px;
+        height: 224px;
+        transform: translateX(-50%);
+        margin-left: 0;
+    }
+    .content.FaceTime .desc{font-size: 28px;}
+    .content.FaceTime .img-area{
+        background: url(../imges/contents/facetime__bv310lpzvjci_medium.png)no-repeat;
+        width: 423px;
+        height: 268px;
+    }
+    .content.mike .headline{font-size: 40px;}
+    .content.mike .video-area .video{
+        width: 393px;
+        height: 403px;
+    }
+    .sc-Keyboard .sub-title span br{display: block;}
+    .sc-Keyboard .sc-header .desc{
+        max-width: 600px;
+        line-height: 1.29167;
+    }
+    .sc-Keyboard .sc-header .img-area{
+        background: url(../imges/contents/magic_keyboard__pewz4toce72a_medium.jpg)no-repeat;
+        width: 856px;
+        height: 520px;
+    }
+    .content.mechanism .desc{max-width: 400px;}
+    .content.mechanism .img-area{
+        background: url(../imges/icon/scissor_mechanism__f050ctxondqy_medium.png)no-repeat;
+        max-width: 250px;
+        top: 62%;
+    }
+    .content.Force{
+        background: url(../imges/contents/trackpad_bg__dz9yyeczqoom_medium.jpg);
+    }
+    .content.Force .headline{font-size: 40px;}
+    .content.Force .headline br{display: block;}
+    .content.touch .info-area .desc{
+        font-size: 28px;
+        max-width: 400px;
+        padding-right: 20px;
+    }
+    .content.touch .touch-list{justify-content: space-between;}
+    .content.touch .touch-item{margin-bottom: 82px;}
+    .content.touch .icon-txt{
+        margin-top: 10px;
+        max-width: 200px;
+        line-height: 1.381;
+    }
+    .sc-connect .sc-header .img-area{
+        background: url(../imges/contents/connectivity__e4v0fdp5fjcm_medium.jpg)no-repeat;
+        width: 1068px;
+        height: 241px;
+        margin-bottom: -100px;
+        background-position: center;
+        background-size: cover;
+    }
+    .content.wifi .info-area{
+        padding: 91px 0 103px;
+    }
+    .content.wifi .img-area{ margin: 19px auto 18px;}
+    .content.wifi .info-area .desc-wifi span{font-size: 64px;}
+    .content.thunder .touch-list{
+        padding: 97px 40px 93px;
+    }
+    .content.thunder .icon-txt{
+        line-height: 1.58824;
+        letter-spacing: .011em;
+    }
+    .content.thunder .touch-item{margin-bottom: 70px;}
+
+    .sc-recommend{
+        padding-top: 75px;
+        margin-top: 150px;
+    }
+    .content.notebook{min-height: 466px;}
+    .content.notebook .group-flex{padding: 14px 0;}
+    .content.notebook .info-area{padding: 0;}
+    .content.notebook .icon-area{
+        width: 31px;
+        height: 36px;
+    }
+    .content.notebook .headline{
+        font-size: 40px;
+        margin-top: 13px;
+        max-width: 295px;
+    }
+    .content.notebook .headline br{display: block;}
+    .content.notebook .chk-btn.check .chk-txt{margin-top: 10px;}
+    .content.notebook .img-area{
+        width: 309px;
+        height: 404px;
+        bottom: -20px;
+    }
+    .content.notebook .img-area .notebook-gray{
+        width: 309px;
+        height: 404px;
+    }
+    .content.notebook .img-area .notebook-sliver{
+        width: 309px;
+        height: 404px;
+    }
+    .content.notebook .img-area .notebook-gold{
+        width: 309px;
+        height: 404px;
+    }
+
+    .content.compare .headline{
+        font-size: 48px;
+        margin-top: 51px;
+    }
+    .content.compare .headline br{display: none;}
+    .content.compare .headline .link-more{
+        margin-top: 22px;
+        margin-bottom: 37px;
+    }
+    .content.compare .compare-box{width: 692px;}
+    .content.compare .img-area{
+        width: 129px;
+        height: 88px;
+    }
+    .content.compare .img-area .compare-img1{
+        width: 129px;
+        height: 88px;
+    }
+    .content.compare .img-area .compare-color1{margin-top: 21px;}
+    .content.compare .img-area .compare-img2{
+        width: 129px;
+        height: 88px;
+    }
+    .content.compare .img-area .compare-color2{margin-top: 21px;}
+    .content.compare .img-area .compare-img3{
+        width: 129px;
+        height: 88px;
+    }
+    .content.compare .img-area .compare-color3{margin-top: 21px;}
+    .content.compare .img-area:last-child{
+        width: 163px;
+        height: 88px;
+    }
+    .content.compare .img-area .compare-img4{
+        width: 163px;
+        height: 88px;
+    }
+    .content.compare .compare-name{
+        padding-top: 35px;
+        font-size: 21px;
+        letter-spacing: .011em;
+        line-height: 1.2858;
+        width: 130%;
+    }
+    .content.compare .compare-item .new{top: 20px;}
+    /* .content.compare .compare-list{margin-right: 35px;} */
+    .content.compare .compare-item br{display: block;}
+    .content.compare .compare-list .padding{padding-top: 15px;}
+    .content.compare .compare-list .padding2{
+        padding-top: 0px;
+        margin-top: -10px;
+    }
+    .content2.monterey .img-area{
+        width: 160px;
+        height: 22px;
+    }
+    .content2.monterey .headline{
+        font-size: 40px;
+        line-height: 1.15;
+    }
+    .content2.accessory .title{padding: 54px 40px 0;}
+    .content2.accessory .info-area{margin-top: 8px;}
+    .content2.accessory .headline{
+        font-size: 40px;
+        line-height: 1.15;
+    }
+    .content2.accessory .img-area{
+        background: url(../imges/contents/router_accessories__f5jgzv8ycvqu_medium.jpg)no-repeat;
+        width: 504px;
+        height: 304px;
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        bottom: -7px;
+    }
+    .section .content.continuity{min-height: 550px;}
+    .section .content.continuity .title{padding: 54px 40px 0;}
+    .section .content.apple .title{padding: 54px 40px 0;}
+    .content.continuity .info-area{
+        padding-bottom: 292px;
+        margin-bottom: 36px;
+    }
+    .content.continuity .headline{font-size: 40px;}
+    .content.continuity .img-area{
+        background: url(../imges/contents/router_continuity__euk1phbcdfee_medium.jpg);
+        width: 504px;
+        height: 275px;
+    }
+    .content.apple .headline{
+        font-size: 39px;
+        line-height: 1.15;
+    }
+    .content.apple .desc{width: 100%;}
+    .content.apple .img-area{
+        width: 352px;
+        height: 190px;
+        background-size: cover;
+    }
+    .content2.education{
+        background: url(../imges/contents/router_education__d86njie9hmaa_medium.jpg);
+        width: 504px;
+        height: 550px;
+        background-position: center;
+    }
+    .content2.education .headline{font-size: 40px;}
+    .content2.work{
+        background: url(../imges/contents/router_business__bdrfem5m1d7m_medium.jpg);
+    }
+    .content2.work{
+        width: 504px;
+        height: 550px;
+        background-position: center;
+    }
+    .content2.work .headline{font-size: 40px;}
+    
 
 }
 
 @media screen and (max-width: 1023px) {
     /* *768을보고 잡아야함 */
-  
+    .content.cpu .desc{max-width: 318px;}
+    .content.cpu .info-area{margin: 45px 0;}
+    /* .content.cpu .img-area{
+        left: 55%;
+        background: url(../imges/contents/processor__gb8d1ide5126_small.png);
+        background-size: 100%;
+    } */
+    .content.gpu .headline{max-width: 310px;}
+
+    .content.battery .headline.add{margin-bottom: 65px;}
+
+    .content.running .info-area{margin-bottom: 40px;}
+    .content.macos .info-area{margin: 45px 0;}
+    .content.macos .desc{max-width: 400px;}
+    .content.macos .img-area{
+        position: relative;
+        left: 7%;
+    }
+    .content.memory{background-size: cover;}
+    .content.color .headline{max-width: 460px;}
+    .content.color .desc{max-width: 180px;}
+    .content.pixel{
+        min-height: 680px;
+        max-height: 709px;
+    }
+    .content.pixel .group-flex{max-height: 568px;}
+    .content.Tone{max-height: 568px;}
+    .content.Tone .info-area{padding: 0;}
+    .content.Tone .desc{padding: 0 30px 0 40px;}
+    .content.Tone .bg-area{background-size: cover;}
+
+    .content.FaceTime .img-area{
+        background: url(../imges/contents/facetime__bv310lpzvjci_medium.png)no-repeat;
+        width: 293px;
+        height: 188px;
+        background-size: 100%;
+    }
+    .content.mike .video-area .video{
+        width: 263px;
+        height: 332px;
+    }
+
+    .content.touch .info-area .desc{
+        word-break: break-word;
+        letter-spacing: .007em;
+    }
+    .content.touch .touch-list{margin-left: 20px;}
+    .content.touch .touch-item:last-child .icon-txt{
+        padding-right: 35px;
+        word-break: break-word;
+    }
+    .content.thunder .icon-txt{word-break: keep-all;}
+    .content.wifi{max-height: 868px;}
+    .content.thunder{max-height: 868px;}
+    .content.notebook .group-flex{padding: 20px 0;}
+    .content.notebook .info-area{margin-left: 8.33333%;}
+    .content.compare .compare-name{font-size: 20px;width: 100%;}
+    .content.compare .compare-box{
+        padding-left: 24px;
+        padding-right: 24px;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+    .content.compare .compare-list{margin-right: 0;}
+    .content.continuity .headline{word-break: keep-all;}
+    .content.continuity .desc{width: 100%;}
+    .content.apple .img-area{
+        width: 305px;
+        height: 201px;
+        background-size: 100%;
+        bottom: -34px;
+    }
+    .content2.education .desc{width: 75%;}
+    .content2.work .desc{width: 86%;}
+
+
+
+
+
 }
 
 @media screen and (max-width: 767px) {
     /* *320을 보고 잡아야함 */
-  
+    
+
+
+
+
+    .content.app .img-area{
+        background: url(../imges/contents/macos_apps__bxvx8h1jtfde_small_2x.png)no-repeat;
+        /* width: 341px;
+        height: 274px; */
+        background-size: 100%;
+    }
+    .content.color .img-area{
+        background: url(../imges/contents/color_bg__gluvmsph8ymy_small_2x.jpg);
+    }
+    .sc-camera .sc-header .img-area .camera-notebook{
+        background: url(../imges/contents/camera_hero_hardware__dri77prvl64i_small_2x.jpg);
+    }
+    .sc-camera .sc-header .img-area .camera-cam{
+        background: url(../imges/contents/camera_hero_screen__caeyynhk0daq_small_2x.png)no-repeat;
+    }
+    .sc-Keyboard .sc-header .img-area{
+        background: url(../imges/contents/magic_keyboard__pewz4toce72a_small_2x.jpg)no-repeat;
+        width: 856px;
+        height: 520px;
+    }
+    .content.mechanism .img-area{
+        background: url(../imges/icon/scissor_mechanism__f050ctxondqy_small_2x.png)no-repeat;
+    }
+    .content.Force{
+        background: url(../imges/contents/trackpad_bg__dz9yyeczqoom_small_2x.jpg);
+    }
+    .sc-connect .sc-header .img-area{
+        background: url(../imges/contents/connectivity__e4v0fdp5fjcm_small_2x.jpg)no-repeat;
+
+    }
+    .content2.accessory .img-area{
+        background: url(../imges/contents/router_accessories__f5jgzv8ycvqu_small_2x.jpg)no-repeat;
+    }
+    .content.continuity .img-area{
+        background: url(../imges/contents/router_continuity__euk1phbcdfee_small_2x.jpg);
+    }
+    .content2.education{
+        background: url(../imges/contents/router_education__d86njie9hmaa_small_2x.jpg);
+    }
+    .content2.work{
+        background: url(../imges/contents/router_business__bdrfem5m1d7m_small_2x.jpg);
+    }
 }
