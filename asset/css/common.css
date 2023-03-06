@@ -181,5 +181,20 @@ body.hidden{overflow: hidden;}
 
 @media screen and (max-width: 767px) {
     /* *320을 보고 잡아야함 */
-  
+    .common-inner1{padding: 0 16px;}
+    .common-inner2{max-width: 400px;}
+    .section .content > .title{
+        padding: 30px 30px 0;
+        letter-spacing: .012em;
+        font-size: 19px;
+    }
+    .content .group-flex{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .section .content{min-height: 546px;    border-radius: 20px;}
+    .sc-header{padding-top: 0;}
+    .desc-large{font-size: 21px;}
+
+    .section .content2{border-radius: 20px;}
 }
