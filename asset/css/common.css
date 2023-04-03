@@ -19,6 +19,7 @@ body{
 }
 body.hidden{overflow: hidden;}
 
+button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-serif;}
 
 
 /* .m1-more{

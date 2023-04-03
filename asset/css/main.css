@@ -217,7 +217,7 @@
     align-items: center;
     padding: 0 40px;
     justify-content: space-between;
-    flex-direction: column;
+    /* flex-direction: column; */
 }
 .content.gpu .headline{
     word-break: keep-all;
@@ -1127,6 +1127,7 @@
     
 }
 .sc-Keyboard .sc-header .sub-title{}
+.sc-Keyboard .sc-header .sub-title br{display: none;}
 .sc-Keyboard .sc-header .sub-title span{
     color: var(--color-gray);
     display: block;
@@ -1560,6 +1561,8 @@
     left: 0;
     width: 405px;
     height: 551px;
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 .content.notebook .img-area .notebook-sliver{
     background: url(../imges/contents/ar_silver__c2t9vh22vus2_large_2x.jpg)no-repeat;
@@ -1570,6 +1573,8 @@
     left: 0;
     width: 405px;
     height: 551px;
+    opacity: 0;
+    transition: opacity 0.3s;
 
     /* display: none; */
 }
@@ -1583,13 +1588,17 @@
     width: 405px;
     height: 551px;
 
-    /* display: none; */
+    /* display: none; */  
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 .content.notebook .img-area .book-img.check{
     display: block;
+    opacity: 1;
 }
 .content.notebook .chk-btn.check .book-img.check{
     display: block;
+    opacity: 1;
 }
 
 
@@ -1893,6 +1902,11 @@
     font-size: 48px;
     font-weight: 700;
     line-height: 1.1875;
+
+    max-width: 86%;
+    display: block;
+    margin: 0 auto;
+    word-break: keep-all;
 }
 .content.apple .desc{
     width: 86%;
@@ -1994,7 +2008,7 @@
 
 
 
-@media screen and (max-width: 1068px) {
+@media screen and (max-width: 1200px) {
     /* *1024을 기준으로 화면을 보고 잡아야함 */ 
     .container .common-inner1{
         width: 692px;
