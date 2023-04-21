@@ -65,9 +65,9 @@ input {
     border: 0;
     font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-serif;
 }
-input:focus {
+/* input:focus {
     outline: none;
-}
+} */
 fieldset {
     margin: 0;
 }

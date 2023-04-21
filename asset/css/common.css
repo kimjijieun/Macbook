@@ -10,6 +10,7 @@
 
 
 body{
+    position: relative;
     /* font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", 'sf-pro-display',"Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial",'Noto Sans KR', 'Malgun Gothic', sans-serif; */
     font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-serif; /* 궁서.고딕 */
     /* line-height: 1.15; */
@@ -77,6 +78,12 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 /* layout */
 .common-inner1{ max-width: 980px; margin: 0 auto; }
 .common-inner2{ max-width: 1390px; padding: 0 24px; margin: 0 auto; }
+.inner1{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 32px 22px 80px;
+    box-sizing: border-box;
+}
 
 
 .section{margin-top: 170px;}

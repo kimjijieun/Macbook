@@ -2,91 +2,79 @@ $(function(){
 
     $(window).scroll(function(){
         if ($(this).scrollTop()>0) {
-            $('.header').addClass('active');
-            // $('html, body').animate({
-            //     scrollTop: 0
-            // }, 400);
             $('.header .header-bottom .menu1').slideUp();
             $('.menu-btn.mobile-visible').removeClass('active');
             $('.header-bottom .m-dimmed').removeClass('active');
 
-            $(window).resize(function(){
-                // if (window.innerWidth < 834) {
-                // $('.header .header-bottom .menu-list.menu1').slideDown();
-                // }else {
-                //     $('.header .header-bottom .menu-list').css('display','flex')
-                // }
-            })
         } else {
-            $('.header').removeClass('active');
-            // $('.search-area, .dimmed').removeClass('active');
+
         }
     // alert(1);
 
     });
 
 
-// 검색 버튼을 누를시 글자가 하나씩 나타났다가 사라진다
+// 검색 버튼을 누르면 나타나라
     $('.link-search').click(function(e){
         e.preventDefault();
-        $('.search-area, .dimmed, .header .nav-list').addClass('active');
+        $('.dimmed, .header .nav-list').addClass('active');
+
+        $('.search-wrap').slideDown();
 
         $('.header .nav-area .m-btn').toggleClass('active');
 
-        gsap.to('.header .nav-item',{
-            opacity: 0,
-            visibility: 'hidden',
-            xPercent:20,
-            // transform: translateX(0),
-            stagger:0.05,
-            // reversed:true
-            // runBackwards:true
-            // animation-delay: 0.5
-        })
-        // gsap.to('.search-area',{
-        //     opacity: 1,
-        //     visibility: 'visible',
-        //     // YPercent:0,
-        //     transform: 'translate(-50%, 0)'
-        // })
-        gsap.from('.search-area .search-box, .search-area .sup-area .sup-item',{
-            opacity: 0,
-            YPercent:20,
-            stagger:0.04,
-        })
-        // alert(3);
-
-        $('body').addClass('hidden');
       })
     
     $('.close, .dimmed').click(function(e){
         e.preventDefault();
         $('.search-area, .dimmed, .header .nav-list').removeClass('active');
-
-        gsap.to('.header .nav-item',{
-            opacity: 1,
-            visibility: 'visible',
-            xPercent:0,
-            // transform: translateX(0),
-            stagger:0.05,
-            // reversed:true
-            // runBackwards:true
-            // animation-delay: 0.5
-        })
-
-        
-
-
-        $('body').removeClass('hidden');
+        // gsap.to('.header .nav-item',{
+        //     opacity: 1,
+        //     visibility: 'visible',
+        //     xPercent:0,
+        //     // transform: translateX(0),
+        //     stagger: {
+        //         from: "end",
+        //         amount: 0.3
+        //       }
+        // })
     })
 
     // dimmed클릭시 닫히기
     $('.dimmed').click(function(e){
         if( !$('.m-btn').has(e.target).length )
           $('.m-btn').removeClass('active');
+          $('.search-area').slideUp();
     });
 
 
+    const menu = gsap.from('.nav-wrap .sub-list',{
+        opacity:0,
+        yPercent:-20,
+        stagger:0.01,
+        paused:true,
+    })
+
+    //nav호버시 내려오기
+    $('.nav-list .nav-item').hover(function(){
+        $(this).children('.nav-wrap').stop().slideDown();
+        menu.restart()
+        $('.dimmed').addClass('active')
+
+    },function(){
+        $('.nav-item .nav-wrap').stop().slideUp();
+        $('.dimmed').removeClass('active')
+        $('.search-area').slideUp();
+    })
+    // search영역 벗어났을때 올라가기
+    // $('.search-wrap').mouseleave(function(){
+    //     $('.search-area, search-wrap').slideUp();
+    //     $('.dimmed').removeClass('active')
+    // })
+    $('.dimmed').hover(function() {
+        $('.search-wrap').slideUp();
+        $('.dimmed').removeClass('active')
+      });
 
 
 
@@ -271,20 +259,6 @@ $(function(){
 
         $(a).addClass('check').siblings().removeClass('check');
         
-        // if (!$('.notebook .book-img').hasClass('check')) {
-        //     $(this).addClass('check');
-        // } else {
-        //     $('.notebook .book-img').removeClass('check');
-           
-        // }
-
-        // if ($(this).siblings('.check').css('display') == 'none') {
-        //     $('.notebook .book-img').addClass('check');
-        //     $(this).siblings().removeClass('check');
-        // } else {
-        //     // $('.notebook .book-img').addClass('check');
-        // }
-        // $('.notebook .book-img').addClass('check').siblings().removeClass('check');
     })
 
 
