@@ -1,7 +1,14 @@
 $(function(){
 
     $(window).scroll(function(){
-        if ($(this).scrollTop()>0) {
+        curr = $(this).scrollTop();
+        hBottomHeight = $('.header-bottom').outerHeight();
+        if(curr > hBottomHeight){
+            $('.header-bottom').addClass('index')
+        }else {
+            $('.header-bottom').removeClass('index')
+        }
+        if (curr > 0) {
             $('.header .header-bottom .menu1').slideUp();
             $('.menu-btn.mobile-visible').removeClass('active');
             $('.header-bottom .m-dimmed').removeClass('active');
@@ -48,18 +55,35 @@ $(function(){
     });
 
 
-    const menu = gsap.from('.nav-wrap .sub-list',{
+    const nav = gsap.from('.nav-wrap .sub-list',{
         opacity:0,
         yPercent:-20,
         stagger:0.01,
         paused:true,
     })
 
+    // nav영역에서 내려갔다하지않게하지
+    $('.nav-list').mouseover(function(){
+        $(this).children('.nav-wrap').stop().slideDown();
+            gsap.to('.nav-wrap',{
+                opacity: 1,
+            })
+        })
+
     //nav호버시 내려오기
     $('.nav-list .nav-item').hover(function(){
         $(this).children('.nav-wrap').stop().slideDown();
-        menu.restart()
+        nav.restart()
         $('.dimmed').addClass('active')
+
+        // 영역 왔다갔다 안하게 시도...
+        if ('.nav-wrap'.hasClass('display', 'none')) {
+            nav.pause()
+            gsap.to('.nav-wrap',{
+                opacity:1,
+                stagger:0.01,
+            })
+        }
 
     },function(){
         $('.nav-item .nav-wrap').stop().slideUp();
@@ -75,6 +99,8 @@ $(function(){
         $('.search-wrap').slideUp();
         $('.dimmed').removeClass('active')
       });
+    
+
 
 
 
@@ -123,77 +149,47 @@ $(function(){
             scrub:1,
             // pin:true
         },
+        ease:'none'
     });
 
     lock
-    // .to('.content.security .img-area',{
-    //     backgroundPosition: (-b * a * 2) + "px 0px"
-    // })
-    // .to('.content.security .img-area',{
-    //     backgroundPosition: "0px -128px"
-    // })
-    // .to('.content.security .img-area',{
-    //     backgroundPosition: (-b * a * 2) + "px -128px"
-    // })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-100px 0px",
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-200px 0px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-300px 0px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-400px 0px"
-    })
-
     .addLabel('a')
+    .to('.content.security .img-area',{
+        'animation-delay': -72
+    },'a')
+
+    const dot = gsap.timeline({
+        scrollTrigger:{
+            trigger:".content.security",//총구,기준태그
+            start:"top 50%",//(트리거기준, 윈도우기준)
+            end: "bottom top",//(트리거기준, 윈도우기준)
+            // markers:true,//좌표
+            scrub:1,
+            // pin:true
+        },
+    });
+
+    dot
+    // .addLabel('a')
+    // .to('.content.security .part-desc .dot',{
+    //     opacity: 0,
+    //     stagger:1,
+    // },'a')
+    // .to('.content.security .part-desc .word',{
+    //     opacity: 1,
+    //     stagger:1,
+    // },'a')
+    .addLabel('b')
     .to('.content.security .part-desc .dot',{
         opacity: 0,
         stagger:1,
-    },'a')
+    },'b')
     .to('.content.security .part-desc .word',{
         opacity: 1,
         stagger:1,
-    },'a')
+    },'b')
     
-    .to('.content.security .img-area',{
-        backgroundPosition: "-500px 0px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-600px 0px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-700px 0px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "0px -128px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "0px -128px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-100px -128px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-200px -128px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-300px -128px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-400px -128px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-500px -128px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-600px -128px"
-    })
-    .to('.content.security .img-area',{
-        backgroundPosition: "-700px -128px"
-    })
+
 
 
 

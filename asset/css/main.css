@@ -553,9 +553,12 @@
     background-size: 800px 1152px;
     background-position: 0px 0px;
 
-    /* animation: unlock 6s forwards; */
-    /* animation-duration: 72s; */
-    /* animation-iteration-count: initial; 무한반복 */
+    animation: unlock 6s steps(1) forwards; 
+    animation-duration: 72s; 
+    animation-iteration-count: initial; /*무한반복 */
+    animation-play-state: paused;
+    animation-delay: 0s;
+
 }
 @keyframes unlock {
     0% {

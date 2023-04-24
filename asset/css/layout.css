@@ -176,6 +176,7 @@
     align-items: flex-end;
     justify-content: space-between;
 }
+.header-bottom.index{z-index: 99;}
 
 
 
@@ -629,6 +630,7 @@ visibility: visible;
 }
 
 .search-area .search-wrap{
+    display: none;
     background: rgb(22 22 23);
 }
 
