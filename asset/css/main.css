@@ -2612,28 +2612,37 @@
 }
 
 @media screen and (max-width: 767px) {
-    /* *320을 보고 잡아야함 375로 잡음 */
+
     .shop-box{padding: 16px 0;}
-    .shop-box .common-inner1{box-sizing: border-box;}
+    .shop-box .common-inner1{
+        box-sizing: border-box;
+        width: 84.5%;
+        word-break: keep-all;
+    }
+    .shop-box .link-more{display: block;}
     .container .common-inner1{
         width: 87.5%;
         /* box-sizing: border-box; */
     }
     .sc-visual .video-area{
-        width: 412px;
-        height: 127px;
-        top: 37px;
-        left: calc(50% + 56px);
+        height: 170px;
+        width: 495px;
+        /* height: 153px; */
+        top: 50px;
+        left: calc(50% + 64px);
+        
         transform: translateX(-50%);
     }
     .sc-visual .info-area{margin-top: 55px;}
     .sc-visual .info-area .title{font-size: 24px;}
     .sc-visual .info-area .sub-title{
         line-height: 1.1875;
-        margin-top: 6px;
         font-size: 48px;
         /* padding: 6px 10px 0; */
         padding: 6px 0;
+        width: 73%;
+        margin: 6px auto 0;
+        word-break: keep-all;
     }
     .sc-visual .info-area .desc{
         max-width: 900px;
@@ -2721,10 +2730,11 @@
     .content.gpu .info-area{
         padding: 0 30px;
         margin: 20px 0;
+        flex-direction: column;
     }
     .content.gpu .headline{
         margin-top: 7px;
-        /* margin-bottom: 57px; */
+        margin-bottom: 57px;
         max-width: 100%;
     }
     .content.gpu .headline br{
@@ -2759,11 +2769,13 @@
         line-height: 1.29167;
     }
     .content.running .img-area{
+        background: url(../imges/contents/machine_learning__d8u6dxf5xawm_small_2x.png)no-repeat center 100%;
         width: 400px;
         height: 281px;
         position: relative;
-        right: 17%;
+        right: 0;
         flex: initial;
+        background-size: 100%;
     }
 
     .content.macos{
@@ -2777,14 +2789,20 @@
     .content.macos .desc{
         margin-top: 20px;
         max-width: 100%;
+        word-break: keep-all;
     }
     .content.macos .img-area{
-        background: url(../imges/contents/macos__kp74urneu7u6_small_2x.png);
+        background: url(../imges/contents/macos__kp74urneu7u6_small.png);
         background-size: 100%;
         left: 0;
         margin-top: 20px;
         width: 400px;
         height: 281px;
+    }
+
+    .content.speed .headline{
+        max-width: 200px;
+        margin: 46px auto 60px auto;
     }
 
     .content.app{margin-top: 24px;}
@@ -2826,7 +2844,238 @@
         background-size: 608px 900px;
         width: 76px;
         height: 100px;
+        animation: small-unlock 6s steps(1) forwards;
+        animation-play-state: paused;
+        animation-iteration-count: initial;
+        animation-duration: 72s;
+        background-position: 0px 0px;
     }
+
+
+    @keyframes small-unlock {
+        0% {
+            background-position: 0px 0px;
+        }
+        1.38889% {
+            background-position: -76px 0px;
+        }
+        2.77778% {
+            background-position: -152px 0px;
+        }
+        4.16667% {
+            background-position: -228px 0px;
+        }
+        5.55556% {
+            background-position: -304px 0px;
+        }
+        6.94444% {
+            background-position: -380px 0px;
+        }
+        8.33333% {
+            background-position: -456px 0px;
+        }
+        9.72222% {
+            background-position: -532px 0px;
+        }
+        11.1111% {
+            background-position: 0px -100px;
+        }
+        12.5% {
+            background-position: -76px -100px;
+        }
+        13.8889% {
+            background-position: -152px -100px;
+        }
+        15.2778% {
+            background-position: -228px -100px;
+        }
+        16.6667% {
+            background-position: -304px -100px;
+        }
+        18.0556% {
+            background-position: -380px -100px;
+        }
+        19.4444% {
+            background-position: -456px -100px;
+        }
+        20.8333% {
+            background-position: -532px -100px;
+        }
+        22.2222% {
+            background-position: 0px -200px;
+        }
+        23.6111% {
+            background-position: -76px -200px;
+        }
+        25% {
+            background-position: -152px -200px;
+        }
+        26.3889% {
+            background-position: -228px -200px;
+        }
+        27.7778% {
+            background-position: -304px -200px;
+        }
+        29.1667% {
+            background-position: -380px -200px;
+        }
+        30.5556% {
+            background-position: -456px -200px;
+        }
+        31.9444% {
+            background-position: -532px -200px;
+        }
+        33.3333% {
+            background-position: 0px -300px;
+        }
+        34.7222% {
+            background-position: -76px -300px;
+        }
+        36.1111% {
+            background-position: -152px -300px;
+        }
+        37.5% {
+            background-position: -228px -300px;
+        }
+        38.8889% {
+            background-position: -304px -300px;
+        }
+        40.2778% {
+            background-position: -380px -300px;
+        }
+        41.6667% {
+            background-position: -456px -300px;
+        }
+        43.0556% {
+            background-position: -532px -300px;
+        }
+        44.4444% {
+            background-position: 0px -400px;
+        }
+        45.8333% {
+            background-position: -76px -400px;
+        }
+        47.2222% {
+            background-position: -152px -400px;
+        }
+        48.6111% {
+            background-position: -228px -400px;
+        }
+        50% {
+            background-position: -304px -400px;
+        }
+        51.3889% {
+            background-position: -380px -400px;
+        }
+        52.7778% {
+            background-position: -456px -400px;
+        }
+        54.1667% {
+            background-position: -532px -400px;
+        }
+        55.5556% {
+            background-position: 0px -500px;
+        }
+        56.9444% {
+            background-position: -76px -500px;
+        }
+        58.3333% {
+            background-position: -152px -500px;
+        }
+        59.7222% {
+            background-position: -228px -500px;
+        }
+        61.1111% {
+            background-position: -304px -500px;
+        }
+        62.5% {
+            background-position: -380px -500px;
+        }
+        63.8889% {
+            background-position: -456px -500px;
+        }
+        65.2778% {
+            background-position: -532px -500px;
+        }
+        66.6667% {
+            background-position: 0px -600px;
+        }
+        68.0556% {
+            background-position: -76px -600px;
+        }
+        69.4444% {
+            background-position: -152px -600px;
+        }
+        70.8333% {
+            background-position: -228px -600px;
+        }
+        72.2222% {
+            background-position: -304px -600px;
+        }
+        73.6111% {
+            background-position: -380px -600px;
+        }
+        75% {
+            background-position: -456px -600px;
+        }
+        76.3889% {
+            background-position: -532px -600px;
+        }
+        77.7778% {
+            background-position: 0px -700px;
+        }
+        79.1667% {
+            background-position: -76px -700px;
+        }
+        80.5556% {
+            background-position: -152px -700px;
+        }
+        81.9444% {
+            background-position: -228px -700px;
+        }
+        83.3333% {
+            background-position: -304px -700px;
+        }
+        84.7222% {
+            background-position: -380px -700px;
+        }
+        86.1111% {
+            background-position: -456px -700px;
+        }
+        87.5% {
+            background-position: -532px -700px;
+        }
+        88.8889% {
+            background-position: 0px -800px;
+        }
+        90.2778% {
+            background-position: -76px -800px;
+        }
+        91.6667% {
+            background-position: -152px -800px;
+        }
+        93.0556% {
+            background-position: -228px -800px;
+        }
+        94.4444% {
+            background-position: -304px -800px;
+        }
+        95.8333% {
+            background-position: -380px -800px;
+        }
+        97.2222% {
+            background-position: -456px -800px;
+        }
+        98.6111% {
+            background-position: -532px -800px;
+        }
+        100% {
+            background-position: -532px -800px;
+        }
+    }
+
+
+
     .content.security .link-detail{
         font-size: 17px;
         display: inline-block;
@@ -2898,6 +3147,9 @@
         height: 182px;
         margin-top: 40px;
     }
+    .content.speed{
+        background-image: radial-gradient(at 72% 100%, #1e1335 0px, transparent 50%),radial-gradient(at 100% 19%, #0d1d4a 0px, transparent 50%),radial-gradient(at 30% 0%, #0d1d4a 0px, transparent 50%),radial-gradient(at 0% 0%, #0d2054 0px, transparent 50%),radial-gradient(at 76% 0%, #061232 0px, transparent 50%),radial-gradient(at 6% 100%, #1e1335 0px, transparent 50%),radial-gradient(at 100% 100%, #1e1335 0px, transparent 50%),radial-gradient(at 35% 100%, #1e1335 0px, transparent 50%),radial-gradient(at 100% 0%, #0b0f32 0px, transparent 50%),radial-gradient(at 1% 53%, #0b0f32 0px, transparent 50%),radial-gradient(at 92% 55%, #0b0f32 0px, transparent 50%),radial-gradient(at 47% 53%, #0b0f32 0px, transparent 50%);
+    }
 
 
     .sc-camera .sc-header .desc{
@@ -2908,7 +3160,7 @@
     .sc-camera .sc-header .img-area{
         width: 352px;
         height: 301px;
-        transform: translate(-50%, 20%);
+        transform: translate(-50%, 35%);
     }
     .sc-camera .sc-header .img-area .camera-notebook{
         background: url(../imges/contents/camera_hero_hardware__dri77prvl64i_small_2x.jpg);
@@ -2918,7 +3170,7 @@
         background-size: 100%;
     }
     .sc-camera .sc-header .img-area .camera-cam{
-        background: url(../imges/contents/camera_hero_screen__caeyynhk0daq_small_2x.png)no-repeat;
+        background: url(../imges/contents/camera_hero_screen__caeyynhk0daq_large_2x.png)no-repeat;
 
         width: 329px;
         height: 99px;
@@ -2934,7 +3186,7 @@
         line-height: 1.45841;
     }
     .content.FaceTime .img-area{
-        background: url(../imges/contents/facetime__bv310lpzvjci_small_2x.png)no-repeat;
+        /* background: url(../imges/contents/facetime__bv310lpzvjci_small_2x.png)no-repeat; */
         background-size: 100%;
 
         margin: 63px -8px 60px -2px;
@@ -2952,7 +3204,7 @@
     }
     .content.mike .video-area .video{
         width: 286px;
-        height: 304px;
+        height: 208px;
     }
 
     .sc-Keyboard .sc-header .sub-title{min-width: 95%;}
@@ -2984,7 +3236,7 @@
     }
 
     .content.Force{
-        background: url(../imges/contents/trackpad_bg__dz9yyeczqoom_small_2x.jpg)no-repeat;
+        /* background: url(../imges/contents/trackpad_bg__dz9yyeczqoom_small_2x.jpg)no-repeat; */
         background-size: 400px 546px;
     }
     .content.Force .info-area{
@@ -3029,6 +3281,10 @@
     .content.touch .img-area.appleTv{
         width: 58px;
         height: 58px;
+    }
+    .content.touch .touch-item:last-child .icon-txt{
+        word-break: keep-all;
+        padding-right: 0;
     }
 
     
@@ -3109,6 +3365,7 @@
         margin-top: 11px;
         width: 273px;
         height: 372px;
+        right: 0;
     }
     .content.notebook .img-area .notebook-gray{
         width: 273px;
@@ -3145,9 +3402,7 @@
         padding-right: 20px;
         margin: 0;
         margin-bottom: 50px;
-
-        flex-direction: row;
-        flex-wrap: wrap;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
     .content.compare .compare-list{
         width: 130px;
@@ -3171,6 +3426,9 @@
         font-size: 18px;
         padding-top: 34px;
     }
+    .content.compare .compare-list:last-child .compare-name{
+        width: 90%;
+    }
     .content.compare .img-area .compare-img2{
         width: 113px;
         height: 82px;
@@ -3187,7 +3445,7 @@
     .content.compare .compare-list:nth-child(3){margin-top: 56px;}
     .content.compare .compare-list:nth-child(3) .compare-name{width: 120%;}
     .content.compare .compare-list:nth-child(4){margin-top: 56px;}
-    .content.compare .compare-list:nth-child(4) .compare-item:last-child {    margin-top: 21px;}
+
 
     .content2.monterey .headline{font-size: 32px;}
 
@@ -3247,13 +3505,44 @@
     .content2.education{
         background: url(../imges/contents/router_education__d86njie9hmaa_small.jpg) no-repeat center;
         background-size: cover;
+        height: 100%;
     }
 
     .content2.work{
         background: url(../imges/contents/router_business__bdrfem5m1d7m_small.jpg) no-repeat center;
         background-size: cover;
+        height: 100%;
     }
     .content2.work .headline{font-size: 32px;}
 
+    .footer .content .guide-item{
+        float: none;
+        width: 100%;
+    }
 
+
+}
+
+@media screen and (max-width: 374px) {
+    .sc-visual .video-area{
+        width: 412px;
+        height: 127px;
+        top: 37px;
+        left: calc(50% + 56px);
+        transform: translateX(-50%);
+    }
+
+    .shop-box .link-more{display: inline-block;}
+    .sc-visual .info-area .sub-title{width: 90%;}
+    .sc-visual .info-area .desc{line-height: 1.45841;}
+
+    .content.cpu{border-radius: 0;}
+
+    .content.battery .headline.add{margin-bottom: 0;}
+
+    .content.speed .group-flex{padding: 0 30px;}
+
+    .content.Tone .desc{width: 80%;}
+
+    .content.mike .video-area .video{width: 260px;}
 }

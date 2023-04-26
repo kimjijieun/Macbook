@@ -38,8 +38,18 @@ $(function(){
             YPercent:20,
             stagger:0.04,
         })
-        $('body').toggleClass('hidden')
+
       })
+
+    $( window ).resize( function() {
+        if (matchMedia("screen and (max-width: 1023px)").matches) {
+            $('.m-search').click(function(){
+                $('body').toggleClass('hidden')
+            })
+        }
+    });
+
+
     
     $('.close, .dimmed').click(function(e){
         e.preventDefault();
