@@ -1205,8 +1205,22 @@ visibility: visible;
         margin-top: -2px;
         color: #fff;
     }
-    .footer .store-wrapper .btn-open .open.active{
+    /* .footer .store-wrapper .btn-open .open.active{
         transform: rotate(45deg) scale(1.08);
+    } */
+    .footer .store-area .store-list{
+        margin: 0;
+        overflow: hidden;
+        padding-top: 5px;
+        padding-bottom: 16px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        visibility: hidden;
+        z-index: -1;
+        transform: translateY(-100px);
+        will-change: transform;
     }
     .footer .store-wrapper .btn-open:focus::after{
         content: "";
@@ -1222,16 +1236,30 @@ visibility: visible;
     }
 
 
+    .footer .store-area.active .btn-open .open{
+        transform: rotate(45deg) scale(1.08);
+    }
+
+    .footer .store-wrapper .store-area{position: relative;}
+    .footer .store-area.active .store-list{
+        position: static;
+        visibility: visible;
+        z-index: 1;
+        transform: none;
+        transition: transform 300ms ease;
+    }
+
+
+
+
 
     .footer .store-wrapper .open{display: block;}
-    .footer .store-wrapper .store-list{
+    /* .footer .store-wrapper .store-list{
         padding-top: 5px;
         padding-bottom: 16px;
         display: none;
         opacity: 1;
-        /* transform: translateY(-100%);
-        transition: all 1s; */
-    }
+    } */
     .footer .store-wrapper .store-list.slide{
         transform: translateY(0%);
         /* transition: all 0.5s; */

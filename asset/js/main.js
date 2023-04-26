@@ -434,88 +434,56 @@ $(function(){
 
 
     // footer 쇼핑및 알아보기
-    n = $('.footer .store-wrapper .store-list');
-    slide = gsap.fromTo('.footer .store-wrapper .store-list',{
-       yPercent:-20,
-       opacity:0,
-       paused:true,
-       delay: (n.length*2000)},{
-        yPercent:0,
-        opacity:1,
-   })
+//     n = $('.footer .store-wrapper .store-list');
+//     slide = gsap.fromTo('.footer .store-wrapper .store-list',{
+//        yPercent:-20,
+//        opacity:0,
+//        paused:true,
+//        delay: (n.length*2000)},{
+//         yPercent:0,
+//         opacity:1,
+//    })
 
 
    $('.store-area .btn-open').click(function(e){
        e.preventDefault();
+    //    $('.footer .store-area').toggleClass('active')
+    //    $(this).siblings('.footer .store-area').addClass('active')
+    
+    if ($(this).parent('.footer .store-area').hasClass('active')) {
+        $(this).parent('.footer .store-area').removeClass('active')
+        $('.footer .store-area').siblings().removeClass('active')
+        // $(this).parent('.footer .store-area').addClass('active').siblings().removeClass('active')
+    } else {
+        $(this).parent('.footer .store-area').addClass('active')
+    }
 
-       $(this).children('.btn-open .open').toggleClass('active')
+    // if ($(this).hasClass('active')) {
+    //     $('.store-list').addClass('active')
+    //     $('.store-area .btn-open').siblings().removeClass('active')
+    // } else {
+    //     $('.store-list').removeClass('active')
+    //     $('.store-area .btn-open').addClass('active')
+    // }
 
-       if ($(this).siblings('.store-list').css('display') == 'none') {
-           $('.store-list').stop().slideUp(200);
-           $(this).siblings('.store-list').slideDown();
 
-           slide.restart()
+
+
+
+
+
+    //    $(this).children('.btn-open .open').toggleClass('active')
+    //    if ($(this).siblings('.store-list').css('display') == 'none') {
+    //        $('.store-list').stop().slideUp(200);
+    //        $(this).siblings('.store-list').slideDown();
+
+    //        slide.restart()
            
-       } else {
-           $('.store-list').stop().slideUp(200);
-       }
+    //    } else {
+    //        $('.store-list').stop().slideUp(200);
+    //    }
    })
 
-    // $(window).resize(function(){ 
-    //     if (window.innerWidth < 735) { 
-        
-    //         n = $('.footer .store-wrapper .store-list');
-    //          slide = gsap.from('.footer .store-wrapper .store-list',{
-    //             yPercent:-100,
-    //             opacity:0,
-    //             paused:true,
-    //             delay: (n.length*2000),
-    //         })
-    //         console.log(n.length);
-
-    //         $('.store-area .btn-open').click(function(e){
-    //             e.preventDefault();
-        
-    //             $(this).children('.btn-open .open').toggleClass('active')
-        
-    //             if ($(this).siblings('.store-list').css('display') == 'none') {
-    //                 $('.store-list').stop().slideUp(200);
-    //                 $(this).siblings('.store-list').slideDown();
-        
-    //                 slide.restart()
-                    
-    //             } else {
-    //                 $('.store-list').stop().slideUp(200);
-    //             }
-    //         })
-
-    //     }else {
-    //         slide = gsap.from('.footer .store-wrapper .store-list',{
-    //             yPercent:0,
-    //             opacity:1,
-    //         })
-
-    //         $('.store-area .btn-open').click(function(){
-    //             $(this).children('.btn-open .open').removeClass('active')
-
-    //             // if ($(this).siblings('.store-list').css('display') == 'none') {
-    //             //     $('.store-list').css('display', 'block');
-    //             //     $(this).siblings('.store-list').stop().slideDown();
-    //             // }
-    //         })
-    //     }
-        
-        
-    // }).resize(); 
-
-    // n = $('.footer .store-wrapper .store-list')
-    // slide = gsap.from('.footer .store-wrapper .store-list',{
-    //     yPercent:-100,
-    //     opacity:0,
-    //     paused:true,
-    //     delay: (n.length*2000),
-    // })
-    // console.log(n.length);
 
 
 
