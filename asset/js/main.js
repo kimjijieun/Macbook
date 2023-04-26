@@ -33,11 +33,11 @@ $(function(){
         $('.search-area').toggleClass('active');
 
         
-        // gsap.from('.search-area .sup-area .sup-item',{
-        //     opacity: 0,
-        //     YPercent:20,
-        //     stagger:0.04,
-        // })
+        gsap.from('.search-area .sup-area .sup-item',{
+            opacity: 0,
+            YPercent:20,
+            stagger:0.04,
+        })
         $('body').toggleClass('hidden')
       })
     
