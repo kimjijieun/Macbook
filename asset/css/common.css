@@ -60,11 +60,11 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 .headline-super{ font-size: 80px; line-height: 1.15; font-weight: 700; word-break: keep-all;}
 .headline-medium{ font-size: 56px; word-break: keep-all;}
 
-.desc-super{ font-size: 32px; line-height: 1.375;word-break: keep-all;}
+.desc-super{ font-size: 32px; line-height: 1.375;word-break: keep-all; font-weight: 500;}
 .desc-large{ font-size: 28px; line-height: 1.25;word-break: keep-all;}
 .desc-medium{ font-size: 19px; line-height: 1.52632;word-break: keep-all;}
 
-.title-normal{ font-size: 21px; font-weight: 600;margin-bottom: 0.4em;}
+.title-normal{ font-size: 21px; font-weight: 500;margin-bottom: 0.4em;}
 
 /* 80* headline-super
 56* headline-medium
@@ -127,7 +127,7 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
     border: 2px solid;
     border-radius: 100px;
     padding: 9px 17px;
-    font-weight: 600;
+    font-weight: 500;
     white-space: normal;
 
 }
@@ -164,9 +164,10 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 @media screen and (max-width: 1068px) {
     /* *1024을 기준으로 화면을 보고 잡아야함 */ 
 
-    .inner1{
+    /* .inner1{
         max-width: 692px;
-    }
+    } */
+    .inner1{padding: 43px 22px 84px;}
     .headline-super{font-size: 64px;}
     .section .content{min-height: 680px;}
     .desc-large{font-size: 24px;}
@@ -177,6 +178,7 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 
 @media screen and (max-width: 833px) {
     /* *768을보고 잡아야함 */
+    .common-inner1{padding: 0 16px;}
     .inner0{
         padding: 0 16px;
         height: 100%;

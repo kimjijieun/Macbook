@@ -188,7 +188,7 @@
 /* w100%가 좋을지 한번 비교 */
 .content.cpu .info-area{padding: 0 40px;}
 .content.cpu .headline > span{display: block; color: #C48CFC;}
-.content.cpu .headline .br{display: none;}
+.content.gpu .headline{max-width: 430px;}
 .content.cpu .desc{
     margin-top: 26px;
     max-width: 470px;
@@ -367,9 +367,13 @@
     line-height: 1.21875;
     letter-spacing: .004em;
 }
-.content.running .desc span{color: #fff}
+.content.running .desc span{
+    color: #fff;
+    display: block;
+    width: 95%;
+}
 .content.running .img-area{
-    background: url(../imges/contents/machine_learning__d8u6dxf5xawm_large.png) no-repeat;
+    background: url(../imges/contents/machine_learning__d8u6dxf5xawm_large_2x.png) no-repeat;
     background-size: 100%;
     width: 696px;
     height: 553px;
@@ -386,7 +390,7 @@
     background-color: #000;
     background-image: radial-gradient(at 100% 0%, rgba(46,110,173,0.99) 0px, transparent 50%),radial-gradient(at 92% 64%, rgba(11,30,80,0.69) 0px, transparent 50%),radial-gradient(at 35% 0%, #0c215a 0px, transparent 50%),radial-gradient(at 0% 0%, #06061d 0px, transparent 50%),radial-gradient(at 76% 0%, #061232 0px, transparent 50%),radial-gradient(at 86% 47%, #0b0f32 0px, transparent 50%),radial-gradient(at 43% 59%, #0b0f32 0px, transparent 50%),radial-gradient(at 6% 100%, #311f47 0px, transparent 50%),radial-gradient(at 42% 100%, #06061d 0px, transparent 50%),radial-gradient(at 1% 53%, #0b0f32 0px, transparent 50%),radial-gradient(at 100% 100%, #0c133b 0px, transparent 50%),radial-gradient(at 63% 100%, #1e1335 0px, transparent 50%),radial-gradient(at 20% 100%, #1e1335 0px, transparent 50%);
 }
-.content.macos .group-flex{justify-content: space-between;}
+.content.macos .group-flex{justify-content: space-between;position: relative;}
 .content.macos .info-area{
     max-width: 470px;
     padding-left: 40px;
@@ -400,7 +404,7 @@
     margin-top: 26px;
 }
 .content.macos .img-area{
-    background: url(../imges/contents/macos__kp74urneu7u6_large.png) no-repeat;
+    background: url(../imges/contents/macos__kp74urneu7u6_large_2x.png) no-repeat;
     background-size: 100%;
     width: 696px;
     height: 553px;
@@ -420,15 +424,14 @@
     flex-direction: column;
     justify-content: space-between;
 }
-.content.speed .info-area{
-    font-weight: 600;
+.content .info-area{
+    font-weight: 500;
     margin-top: 26px;
+    margin-top: 0.77em;
 }
 .content.speed .info-area .desc{
     font-size: 19px;
     line-height: 1.4211;
-    font-weight: 600;
-    letter-spacing: .012em;
 }
 .content.speed .headline{
     text-align: center;
@@ -460,8 +463,6 @@
 .content.app .info-area .desc{
     font-size: 19px;
     line-height: 1.4211;
-    font-weight: 600;
-    letter-spacing: .012em;
 }
 .content.app .img-area{
     background: url(../imges/contents/macos_apps__bxvx8h1jtfde_large.png)no-repeat;
@@ -493,7 +494,7 @@
 }
 .content.memory .desc{
     margin: 26px 0 -6px 0;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 
@@ -967,7 +968,6 @@
 .content.Tone .desc{
     color: var(--color-gray);
     line-height: 1.21875;
-    font-weight: 600;
     letter-spacing: .004em;
     flex: 1;
 }
@@ -1086,9 +1086,13 @@
     background: url(../imges/contents/facetime__bv310lpzvjci_large_2x.png)no-repeat;
     background-size: 100%;
 
-    width: 638px;
+    width: 100%;
     height: 395px;
     margin: 40px 19px 40px -14px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
 }
 
 
@@ -1102,6 +1106,7 @@
 }
 .content.mike .group-flex{
     padding-left: 40px;
+    padding-right: 40px;
     align-items: flex-start;
     flex-direction: column;
     justify-content: space-between;
@@ -1115,11 +1120,13 @@
     line-height: 1.2;
 }
 .content.mike .video-area{
+    width: 100%;
+    height: 100%;
     margin: -11px 0px 0px -3px;
 }
 .content.mike .video-area .video{
-    width: 612px;
-    height: 444px;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -1230,21 +1237,17 @@
 }
 
 .content.touch .info-area .desc{
-
-    font-weight: 600;
     line-height: 1.21875;
 }
 .content.touch .touch-list{
     display: flex;
     flex-wrap: wrap;
-    /* justify-content: space-between;
-    align-content: space-between; */
     /* max-width: 520px; */
     justify-content: flex-end;
 }
 .content.touch .touch-item{
     width: 41.66667%;
-    margin-bottom: 90px;
+    margin-bottom: 20vh;
 }
 
 .content.touch .img-area{}
@@ -1276,7 +1279,9 @@
     display: inline-block;
     margin-top: 9px;
     font-size: 21px;
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 1.381;
+    max-width: 200px;
 }
 
 
@@ -1430,7 +1435,7 @@
     margin-top: 10px;
     line-height: 1.2858;
     font-size: 21px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .011em;
     margin-bottom: 0.4em;
 }
@@ -1454,7 +1459,7 @@
     background: #1d1d1f;
     min-height: 599px;
 }
-.content.notebook .group-flex{justify-content: center;}
+.content.notebook .group-flex{align-items: flex-end;}
 .content.notebook .info-area{
     flex: 1;
     padding-bottom: 55px;
@@ -1477,7 +1482,7 @@
     font-weight: 700;
     display: block;
 }
-.content.notebook .headline br{display: none;}
+/* .content.notebook .headline br{display: none;} */
 .content.notebook .desc{
     font-size: 17px;
     max-width: 270px;
@@ -1568,7 +1573,7 @@
     transition: opacity 0.3s;
 }
 .content.notebook .img-area .notebook-sliver{
-    background: url(../imges/contents/ar_silver__c2t9vh22vus2_large_2x.jpg)no-repeat;
+    background: url(../imges/contents/ar_silver__c2t9vh22vus2_large.jpg)no-repeat;
     background-size: 100%;
     
     position: absolute;
@@ -1582,7 +1587,7 @@
     /* display: none; */
 }
 .content.notebook .img-area .notebook-gold{
-    background: url(../imges/contents/ar_gold__fmrxlx9ex8yi_large_2x.jpg)no-repeat;
+    background: url(../imges/contents/ar_gold__fmrxlx9ex8yi_large.jpg)no-repeat;
     background-size: 100%;
     
     position: absolute;
@@ -1626,19 +1631,19 @@
     font-size: 21px;
     display: block;
     margin: 43px 0 81px;
+    font-weight: 500;
 }
+.content.compare .headline br{display: none;}
 .content.compare .compare-box{
-    display: flex;
-    justify-content: center;
     margin-left: auto;
     margin-right: auto;
+
+    display: grid;
+    width: 928px;
     margin-bottom: 68px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-.content.compare .compare-list{
-    width: 227px;
-    margin-right: 24px;
-    flex: 1;
-}
+
 .content.compare .compare-list:last-child{
     margin-right: 0;
 }
@@ -1667,7 +1672,7 @@
 
 .content.compare .img-area{}
 .content.compare .img-area .compare-img1{
-    background: url(../imges/contents/compare_mba__h3jrdtzdcbm2_large_2x.png)no-repeat;
+    background: url(../imges/contents/compare_mba__h3jrdtzdcbm2_large.png)no-repeat;
     background-size: 100%;
     display: block;
 
@@ -1675,7 +1680,7 @@
     height: 114px
 }
 .content.compare .img-area .compare-img2{
-    background: url(../imges/contents/compare_mba__h3jrdtzdcbm2_large_2x.png)no-repeat;
+    background: url(../imges/contents/compare_mba_m2__e3tzj75hwnqu_large.png)no-repeat;
     background-size: 100%;
     display: block;
 
@@ -1683,7 +1688,7 @@
     height: 114px
 }
 .content.compare .img-area .compare-img3{
-    background: url(../imges/contents/compare_mbp_13__9j7gq7j09le6_large_2x.png)no-repeat;
+    background: url(../imges/contents/compare_mbp_13__9j7gq7j09le6_large.png)no-repeat;
     background-size: 100%;
     display: block;
 
@@ -1691,7 +1696,7 @@
     height: 114px
 }
 .content.compare .img-area .compare-img4{
-    background: url(../imges/contents/compare_mbp_14_16__gb70k890dbe6_large_2x.png)no-repeat;
+    background: url(../imges/contents/compare_mbp_14_16__gb70k890dbe6_large.png)no-repeat;
     background-size: 100%;
     display: block;
     width: 213px;
@@ -1755,20 +1760,28 @@
 .content.compare .compare-item.compare-top{
     padding-top: 10px;
 }
+.content.compare .compare-item.compare-top.padding{
+    padding-top: 17px;
+}
 .content.compare .compare-item .new{
     position: absolute;
     top: -16px;
     color: #bf4800;
     font-size: 12px;
 }
-
+.content.compare .compare-list:last-child .compare-name{
+    word-break: break-word;
+    width: 90%;
+    margin-bottom: 0;
+}
+.content.compare .compare-list:last-child .padding{padding-top: 10px;}
 
 
 
 /* monterey */
 .content2.monterey{
     position: relative;
-    background: url(../imges/contents/router_macos_monterey__udnmginx37m6_large_2x.jpg) no-repeat;
+    background: url(../imges/contents/router_macos_ventura__hlw6jgutiwy2_large_2x.jpg) no-repeat center;
     background-size: cover;
 }
 .content2.monterey .group-flex{
@@ -1776,20 +1789,20 @@
     flex-direction: column;
     justify-content: center;
 }
-.content2.monterey .info-area{}
-.content2.monterey .img-area{
-    background: url(../imges/icon/router_macos_monterey_logo__bl5bc7c0w6aa_large_2x.png)no-repeat;
-    background-size: 100%;
-
-    width: 188px;
-    height: 26px;
-    margin: 11px auto;
+.content2.monterey .monterey-title{
+    letter-spacing: .009em;
+    font-size: 24px;
+    line-height: 1.29167;
+    margin-bottom: 0.4em;
+    font-weight: 500;
 }
+
 .content2.monterey .headline{
     font-size: 48px;
     line-height: 1.1875;
     font-weight: 600;
     display: inline-block;
+    text-align: center;
 }
 .content2.monterey .link-more{
     margin-top: 0.8em;
@@ -1842,12 +1855,17 @@
     background: #1d1d1f;
     position: relative;
 }
+.content.continuity .title{
+    padding-top: 43px;
+    margin-bottom: 0;
+}
 .content.continuity .group-flex{
     margin-top: 12px;
     text-align: center;
     flex-direction: column;
 }
 .content.continuity .info-area{
+    margin-top: 12px;
     padding-bottom: 360px;
     margin-bottom: 36px;
     padding-left: 40px;
@@ -2085,7 +2103,8 @@
         height: 508px;
         background-size: cover;
     }
-    .content.cpu .headline .br{display: block;}
+    .content.cpu .headline .br{display: none;}
+    .content.gpu .headline{max-width: 430px;}
     .content.gpu .desc{
         letter-spacing: .012em;
         margin-right: 0;
@@ -2099,12 +2118,17 @@
     }
     .content.battery .headline br{display: none;}
     .content.fever.col-4{width: 60%;}
-    .content.running .group-flex{position: relative;flex-direction: column;}
+    .content.running .group-flex{position: relative;flex-direction: column;    justify-content: center;}
     .content.running .info-area{
         position: absolute;
         left: 50%;
     }
     .content.running .desc{font-size: 28px;}
+    .content.running .desc span{
+        display: inline-block;
+        width: 100%;
+        word-break: break-all;
+    }
     .content.running .img-area{
         width: 635px;
         height: 507px;
@@ -2112,6 +2136,7 @@
         position: absolute;
         right: 50%;
     }
+
     .content.macos .info-area{
         max-width: 400px;
     }
@@ -2121,12 +2146,15 @@
     }
     .content.macos .desc{margin-top: 23px;}
     .content.macos .img-area{
-        background: url(../imges/contents/macos__kp74urneu7u6_medium.png);
         width: 592px;
         height: 469px;
         background-size: cover;
+
+        bottom: 28px;
+        position: absolute;
+        right: -12%;
     }
-    .content.speed .info-area{margin-top: 19px;}
+    /* .content.speed .info-area{margin-top: 19px;} */
     .content.speed .info-area .desc{line-height: 1.52632;}
     .content.speed .info-area .desc br{display: none;}
     .content.speed .headline{max-width: 320px;}
@@ -2154,6 +2182,8 @@
         width: 100%;
         margin-top: 24px;
     }
+
+    
     .content.memory .desc{font-size: 24px;}
     .content.ssd{
         width: calc(50% - 14px);
@@ -2224,7 +2254,7 @@
         height: 478px;
     }
     .sc-camera .sc-header .img-area .camera-cam{
-        background: url(../imges/contents/camera_hero_screen__caeyynhk0daq_medium.png)no-repeat;
+        /* background: url(../imges/contents/camera_hero_screen__caeyynhk0daq_medium.png)no-repeat; */
         width: 750px;
         height: 224px;
         transform: translateX(-50%);
@@ -2232,8 +2262,8 @@
     }
     .content.FaceTime .desc{font-size: 28px;}
     .content.FaceTime .img-area{
-        background: url(../imges/contents/facetime__bv310lpzvjci_medium.png)no-repeat;
-        width: 423px;
+        /* background: url(../imges/contents/facetime__bv310lpzvjci_medium.png)no-repeat; */
+        /* width: 423px; */
         height: 268px;
     }
     .content.mike .headline{font-size: 40px;}
@@ -2241,6 +2271,7 @@
         width: 393px;
         height: 403px;
     }
+    .sc-Keyboard .sc-header .sub-title br{display: block;}
     .sc-Keyboard .sub-title span br{display: block;}
     .sc-Keyboard .sc-header .desc{
         max-width: 600px;
@@ -2251,14 +2282,14 @@
         width: 856px;
         height: 520px;
     }
-    .content.mechanism .desc{max-width: 400px;}
+    .content.mechanism .desc{max-width: 400px;margin-top: 0;}
     .content.mechanism .img-area{
         background: url(../imges/icon/scissor_mechanism__f050ctxondqy_medium.png)no-repeat;
         max-width: 250px;
         top: 62%;
     }
     .content.Force{
-        background: url(../imges/contents/trackpad_bg__dz9yyeczqoom_medium.jpg);
+        background: url(../imges/contents/trackpad_bg__dz9yyeczqoom_medium.jpg) no-repeat center;
     }
     .content.Force .headline{font-size: 40px;}
     .content.Force .headline br{display: block;}
@@ -2268,7 +2299,7 @@
         padding-right: 20px;
     }
     .content.touch .touch-list{justify-content: space-between;}
-    .content.touch .touch-item{margin-bottom: 82px;}
+    /* .content.touch .touch-item{margin-bottom: 82px;} */
     .content.touch .icon-txt{
         margin-top: 10px;
         max-width: 200px;
@@ -2290,10 +2321,10 @@
     .content.thunder .touch-list{
         padding: 97px 40px 93px;
     }
-    .content.thunder .icon-txt{
+    /* .content.thunder .icon-txt{
         line-height: 1.58824;
         letter-spacing: .011em;
-    }
+    } */
     .content.thunder .touch-item{margin-bottom: 70px;}
 
     .sc-recommend{
@@ -2301,7 +2332,11 @@
         margin-top: 150px;
     }
     .content.notebook{min-height: 466px;}
-    .content.notebook .group-flex{padding: 14px 0;}
+    .content.notebook .group-flex{
+        padding: 14px 0;
+        justify-content: center;
+        align-items: center;
+    }
     .content.notebook .info-area{padding: 0;}
     .content.notebook .icon-area{
         width: 31px;
@@ -2341,7 +2376,10 @@
         margin-top: 22px;
         margin-bottom: 37px;
     }
-    .content.compare .compare-box{width: 692px;}
+    .content.compare .compare-box{
+        width: 692px;
+        grid-column-gap: 35px;
+    }
     .content.compare .img-area{
         width: 129px;
         height: 88px;
@@ -2372,9 +2410,10 @@
     .content.compare .compare-name{
         padding-top: 35px;
         font-size: 21px;
-        letter-spacing: .011em;
         line-height: 1.2858;
-        width: 130%;
+        width: 120%;
+        letter-spacing: -0.011em;
+        font-weight: 500;
     }
     .content.compare .compare-item .new{top: 20px;}
     /* .content.compare .compare-list{margin-right: 35px;} */
@@ -2384,9 +2423,8 @@
         padding-top: 0px;
         margin-top: -10px;
     }
-    .content2.monterey .img-area{
-        width: 160px;
-        height: 22px;
+    .content2.monterey .monterey-title{
+        font-size: 21px;
     }
     .content2.monterey .headline{
         font-size: 40px;
@@ -2407,8 +2445,18 @@
         position: relative;
         bottom: -7px;
     }
-    .section .content.continuity{min-height: 550px;}
+    .content.continuity .group-flex{    margin-top: 0;}
+    .section .content.continuity{
+        min-height: 550px;
+        box-sizing: border-box;
+        height: 100%;
+    }
     .section .content.continuity .title{padding: 54px 40px 0;}
+
+    .content.apple{
+        min-height: 550px;
+        box-sizing: border-box;
+    }
     .section .content.apple .title{padding: 54px 40px 0;}
     .content.continuity .info-area{
         padding-bottom: 292px;
@@ -2416,18 +2464,23 @@
     }
     .content.continuity .headline{font-size: 40px;}
     .content.continuity .img-area{
-        background: url(../imges/contents/router_continuity__euk1phbcdfee_medium.jpg);
+        /* background: url(../imges/contents/router_continuity__euk1phbcdfee_medium.jpg); */
         width: 504px;
         height: 275px;
     }
+
+    .content.apple .group-flex{margin-top: 0;}
     .content.apple .headline{
-        font-size: 39px;
+        font-size: 40px;
         line-height: 1.15;
+        letter-spacing: -0.01em;
     }
+    .content.apple .headline br{display: none;}
     .content.apple .desc{width: 100%;}
     .content.apple .img-area{
-        width: 352px;
-        height: 190px;
+        background: url(../imges/contents/router_trade_in_macbook_air__f9c0nvzjr36u_medium_2x.jpg);
+        width: 305px;
+        height: 201px;
         background-size: cover;
     }
     .content2.education{
@@ -2452,23 +2505,27 @@
 
 @media screen and (max-width: 1023px) {
     /* *768을보고 잡아야함 */
-    .content.cpu .desc{max-width: 318px;}
+    .content.cpu .desc{max-width: 318px;font-weight: 500;}
+    .content.cpu .headline .br{display: block;}
     .content.cpu .info-area{margin: 45px 0;}
-    /* .content.cpu .img-area{
-        left: 55%;
-        background: url(../imges/contents/processor__gb8d1ide5126_small.png);
-        background-size: 100%;
-    } */
+    .content.cpu .img-area{
+        left: 57%;
+    }
     .content.gpu .headline{max-width: 310px;}
 
     .content.battery .headline.add{margin-bottom: 65px;}
 
+    .content.running .desc span{
+        width: 100%;
+        word-break: inherit;
+    }
     .content.running .info-area{margin-bottom: 40px;}
     .content.macos .info-area{margin: 45px 0;}
     .content.macos .desc{max-width: 400px;}
     .content.macos .img-area{
         position: relative;
         left: 7%;
+        bottom: 0;
     }
     .content.memory{background-size: cover;}
     .content.color .headline{max-width: 460px;}
@@ -2483,6 +2540,7 @@
     .content.Tone .desc{padding: 0 30px 0 40px;}
     .content.Tone .bg-area{background-size: cover;}
 
+
     .content.FaceTime .img-area{
         background: url(../imges/contents/facetime__bv310lpzvjci_medium.png)no-repeat;
         width: 293px;
@@ -2493,36 +2551,59 @@
         width: 263px;
         height: 332px;
     }
+    .content.mike .info-area{
+        margin-top: 58px;
+        max-width: 94%;
+    }
 
     .content.touch .info-area .desc{
-        word-break: break-word;
+        word-break: keep-all;
         letter-spacing: .007em;
     }
     .content.touch .touch-list{margin-left: 20px;}
     .content.touch .touch-item:last-child .icon-txt{
-        padding-right: 35px;
+        padding-right: 30px;
         word-break: break-word;
     }
     .content.thunder .icon-txt{word-break: keep-all;}
     .content.wifi{max-height: 868px;}
     .content.thunder{max-height: 868px;}
-    .content.notebook .group-flex{padding: 20px 0;}
+    .content.notebook .group-flex{padding: 20px 0;justify-content: space-between;}
     .content.notebook .info-area{margin-left: 8.33333%;}
-    .content.compare .compare-name{font-size: 20px;width: 100%;}
+    .content.notebook .img-area{right: 2.8%;}
+
+
+    .content.compare .compare-name{font-size: 20px;width: 105%;}
+    .content.compare .compare-list:last-child .compare-name{width: 100%;}
     .content.compare .compare-box{
         padding-left: 24px;
         padding-right: 24px;
         box-sizing: border-box;
         justify-content: space-between;
     }
+    .content.compare .compare-list:nth-child(3){
+        width: 110%;
+    }
     .content.compare .compare-list{margin-right: 0;}
+
+
     .content.continuity .headline{word-break: keep-all;}
     .content.continuity .desc{width: 100%;}
+    .content.apple .headline{
+        max-width: 100%;
+        font-weight: 500;
+        letter-spacing: -0.02em;
+    }
     .content.apple .img-area{
         width: 305px;
         height: 201px;
         background-size: 100%;
-        bottom: -34px;
+        /* bottom: -34px; */
+    }
+
+    .content2.accessory .img-area{
+        width: 504px;
+        height: 280px;
     }
     .content2.education .desc{width: 75%;}
     .content2.work .desc{width: 86%;}
@@ -2614,6 +2695,7 @@
         box-sizing: border-box;
         flex-direction: column;
     }
+
     .content.cpu .info-area{
         margin: 20px 0;
         padding: 0 30px;
