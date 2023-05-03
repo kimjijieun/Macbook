@@ -68,89 +68,31 @@ $(function(){
 
     // //////////////////....NAV영역.../////////////////
 
-    const nav = gsap.from('.nav-wrap .sub-list',{
-        opacity:0,
-        yPercent:-20,
-        stagger:0.01,
-        paused:true,
-    })
-
-    // nav영역에서 내려갔다하지않게하지
-    // $('.nav-list').mouseover(function(){
-    //     $(this).find('.nav-wrap').stop().slideDown();
-    //         gsap.to('.nav-wrap',{
-    //             opacity: 1,
-    //         })
-    //     })
-
-    //nav호버시 내려오기
-    $('.nav-list .nav-item').hover(function(){
-        $(this).children('.nav-wrap').stop().slideDown();
-        // $(this).find('.nav-wrap').siblings().fadeIn()
-        // $(this).children('.nav-wrap').stop().fadeIn();
-        if ($('.nav-wrap').hasClass('display', 'block')) {
-                // nav.pause()
-                // $(this).siblings().stop.slideDown();
-                $('.nav-item .nav-wrap').siblings().fadeIn();
-                // $(this).fadeOut()
-                gsap.to('.nav-wrap',{
-                    opacity:1,
-                    stagger:0.01,
-                })
-            }
-            // if ($('.nav-list .nav-item').siblings().mouseover) {
-            //     // nav.pause()
-            //     // $(this).siblings().stop.slideDown();
-            //     $('.nav-item .nav-wrap').fadeIn()
-            //     $('.nav-wrap').stop().slideDown();
-            //     // $(this).fadeOut()
-            //     // gsap.to('.nav-wrap',{
-            //     //     opacity:1,
-            //     //     stagger:0.01,
-            //     // })
-            // }
-        nav.restart()
-        $('.dimmed').addClass('active')
-
-        // 영역 왔다갔다 안하게 시도...
-        // if ($('.nav-wrap').hasClass('display', 'none')) {
-        //     nav.pause()
-        //     gsap.to('.nav-wrap',{
-        //         opacity:1,
-        //         stagger:0.01,
-        //     })
-        // }
-
-    },function(){
-        $('.nav-wrap').stop().fadeOut();
-        $('.nav-item .nav-wrap').stop().slideUp();
-        $('.dimmed').removeClass('active')
-        // $('.search-wrap').slideUp();
-    })
-
-
-    // $('.nav-list .nav-item').hover(function(){
-
-    //     $(this).children('.nav-wrap').fadeIn()
-    //     nav.restart()
-    //     $('.dimmed').addClass('active')
-
-    // },function(){
-    //     $('.nav-wrap').fadeOut();
-    //     $('.dimmed').removeClass('active')
+    // const nav = gsap.from('.nav-wrap .sub-list',{
+    //     opacity:0,
+    //     yPercent:-20,
+    //     stagger:0.01,
+    //     paused:true,
     // })
 
 
- /////////////////////여기까지///////////////////
+    $('.header-nav .nav-item').hover(function(){
+        navHeight = $(this).find('.nav-wrap').outerHeight()
+        $('.nav-wrap').removeClass('on');
+        $(this).find('.nav-wrap').addClass('on');
+        $('.header .nav-bg').css('height',navHeight);
+    })
+    $('.header-nav .nav-list').mouseleave(function(){
+        $('.header .nav-bg').css('height',0);
+        $('.nav-wrap').removeClass('on');
+    })
 
 
 
 
-    // search영역 벗어났을때 올라가기
-    // $('.search-wrap').mouseleave(function(){
-    //     $('.search-area, search-wrap').slideUp();
-    //     $('.dimmed').removeClass('active')
-    // })
+
+
+
     $('.dimmed').hover(function() {
         $('.search-wrap').slideUp();
         $('.dimmed').removeClass('active')
@@ -236,52 +178,6 @@ $(function(){
         stagger:1,
     },'b')
 
-
-
-
-    // dot불러와서 바꿔보기,,시도
-
-    // let idx=0;
-
-    // dotTxt = ['비','밀','을','엄','수','합','니','다']
-    // dotTxt1 = ['비','밀','을']
-    // dotTxt2 = ['엄','수','합','니','다']
-    // // let m = dotTxt.replace(dotTxt[idx], '.dot');
-    // // console.log(m)
-    // s =$('.dot-box .dot').html(`${dotTxt}`)
-    // // // s++;
-    // // console.log(s)
-
-    // // Txt = setInterval(() => {
-    // //     $('.dot-box .dot').html(dotTxt[idx])
-    // //     idx++;
-    // //     console.log(idx);
-    // // }, 200);
-    // // setTimeout(() => {
-    // //     clearInterval(Txt);
-    // // }, Txt.length);
-    
-
-    // c = gsap.timeline({
-    //         scrollTrigger:{
-    //             trigger:".content.security",//총구,기준태그
-    //             start:"top 50%",//(트리거기준, 윈도우기준)
-    //             end: "bottom top",//(트리거기준, 윈도우기준)
-    //             // markers:true,//좌표
-    //             scrub:1,
-    //             // pin:true
-    //         },
-    //     });
-
-    
-
-    // c.fromTo(s,{
-    //         opacity: 0,
-    //         stagger:1,
-    //     },{
-    //         opacity: 1,
-    //         stagger:1,
-    //     })
 
 
     
@@ -446,49 +342,18 @@ $(function(){
 
 
    $('.store-area .btn-open').click(function(e){
-       e.preventDefault();
-    //    $('.footer .store-area').toggleClass('active')
-    //    $(this).siblings('.footer .store-area').addClass('active')
-    
-    if ($(this).parent('.footer .store-area').hasClass('active')) {
-        $(this).parent('.footer .store-area').removeClass('active')
-        $('.footer .store-area').siblings().removeClass('active')
-        // $(this).parent('.footer .store-area').addClass('active').siblings().removeClass('active')
-    } else {
+        e.preventDefault();
+        $('.footer .store-area').toggleClass('active');
+
+        if ($(this).parent('.footer .store-area').hasClass('active')) {
+        $('.footer .store-area').removeClass('active')
         $(this).parent('.footer .store-area').addClass('active')
-    }
 
-    // if ($(this).hasClass('active')) {
-    //     $('.store-list').addClass('active')
-    //     $('.store-area .btn-open').siblings().removeClass('active')
-    // } else {
-    //     $('.store-list').removeClass('active')
-    //     $('.store-area .btn-open').addClass('active')
-    // }
+        } else {
+            $('.footer .store-area').removeClass('active')
+        }
 
-
-
-
-
-
-
-    //    $(this).children('.btn-open .open').toggleClass('active')
-    //    if ($(this).siblings('.store-list').css('display') == 'none') {
-    //        $('.store-list').stop().slideUp(200);
-    //        $(this).siblings('.store-list').slideDown();
-
-    //        slide.restart()
-           
-    //    } else {
-    //        $('.store-list').stop().slideUp(200);
-    //    }
    })
-
-
-
-
-
-    
 
 
 });
