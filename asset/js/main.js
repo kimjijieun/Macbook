@@ -68,14 +68,6 @@ $(function(){
 
     // //////////////////....NAV영역.../////////////////
 
-    // const nav = gsap.from('.nav-wrap .sub-list',{
-    //     opacity:0,
-    //     yPercent:-20,
-    //     stagger:0.01,
-    //     paused:true,
-    // })
-
-
     $('.header-nav .nav-item').hover(function(){
         navHeight = $(this).find('.nav-wrap').outerHeight()
         $('.nav-wrap').removeClass('on');
@@ -108,11 +100,11 @@ $(function(){
     gsap.to('.content.battery .headline-super',{
         // y:-180 픽셀
         scrollTrigger:{
-            trigger:".content.battery .headline-super",//총구,기준태그
-            start:"top 70%",//(트리거기준, 윈도우기준)
-            end: "50% top",//(트리거기준, 윈도우기준)
+            trigger:".content.battery .headline-super",
+            start:"top 70%",
+            end: "50% top",
             toggleClass:"add",
-            // markers:true,  //좌표
+            // markers:true,
             // scrub:1,
             once: true, //한번만
         },
@@ -123,12 +115,11 @@ $(function(){
 
     // speed 속도 및 반응성
     gsap.to('.content.speed .speedOn',{
-        // y:-180 픽셀
         scrollTrigger:{
-            trigger:".speed",//총구,기준태그
-            start:"50% 60%",//(트리거기준, 윈도우기준)
-            end: "50% top",//(트리거기준, 윈도우기준)
-            // markers:true,//좌표
+            trigger:".speed",
+            start:"50% 60%",
+            end: "50% top",
+            // markers:true,
             // scrub:1,
         },
 
@@ -140,9 +131,9 @@ $(function(){
 
     const lock = gsap.timeline({
         scrollTrigger:{
-            trigger:".content.security",//총구,기준태그
-            start:"top 50%",//(트리거기준, 윈도우기준)
-            end: "70% 70%",//(트리거기준, 윈도우기준)
+            trigger:".content.security",
+            start:"top 50%",
+            end: "70% 70%",
             // markers:true,//좌표
             scrub:1,
             // pin:true
@@ -158,12 +149,11 @@ $(function(){
 
     const dot = gsap.timeline({
         scrollTrigger:{
-            trigger:".content.security",//총구,기준태그
-            start:"20% 50%",//(트리거기준, 윈도우기준)
-            end: "80% 50%",//(트리거기준, 윈도우기준)
-            // markers:true,//좌표
+            trigger:".content.security",
+            start:"20% 50%",
+            end: "80% 50%",
+            // markers:true,
             scrub:1,
-            // pin:true
         },
     });
 
@@ -267,11 +257,9 @@ $(function(){
 
         if ($('.menu-btn.mobile-visible').hasClass('active')) {
             $('.header-bottom .m-box, .m-menu').slideUp();
-            // $('.header .header-bottom .menu-list').css('display', 'flex');
             $('.menu-btn.mobile-visible').removeClass('active')
             $('.header-bottom .m-dimmed').removeClass('active');
             $('.container').removeClass('index')
-            // $('body').removeClass('hidden');
             gsap.to('.header-bottom .m-menu .menu-item',{
                 opacity: 0,
                 yPercent:50,
@@ -284,7 +272,6 @@ $(function(){
             $('.menu-btn.mobile-visible').addClass('active');
             $('.header-bottom .m-dimmed').addClass('active');
             $('.container').addClass('index')
-            // $('body').addClass('hidden');
             gsap.to('.header-bottom .m-menu .menu-item',{
                 opacity: 1,
                 yPercent:0,
@@ -330,15 +317,6 @@ $(function(){
 
 
     // footer 쇼핑및 알아보기
-//     n = $('.footer .store-wrapper .store-list');
-//     slide = gsap.fromTo('.footer .store-wrapper .store-list',{
-//        yPercent:-20,
-//        opacity:0,
-//        paused:true,
-//        delay: (n.length*2000)},{
-//         yPercent:0,
-//         opacity:1,
-//    })
 
 
    $('.store-area .btn-open').click(function(e){

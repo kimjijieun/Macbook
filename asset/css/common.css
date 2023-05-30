@@ -23,25 +23,6 @@ body.hidden{overflow: hidden;}
 button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-serif;}
 
 
-/* .m1-more{
-    background-color: transparent;
-    border: 2px solid;
-    border-radius: 100px;
-    padding: 9px 17px;
-    font-weight: 600;
-    white-space: normal;
-}
-.m2-more{
-    display: inline-block;
-    border-radius: 100px;
-    padding: 4px 11px;
-    font-size: 12px;
-    font-weight: 600;
-    white-space: normal;
-    margin-top: 20px;
-    background: #0071e3;
-} */
-
 
 .blind{
     width: 1px;
@@ -144,13 +125,6 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 .link-more:hover{text-decoration: underline;}
 
 
-/* .content.cpu .group-flex > *{flex: 1;}
-.content.gpu .info-area {
-    display: flex;
-    align-items: center;
-    padding: 0 40px;
-    justify-content: space-between;
-} */
 
 
 
