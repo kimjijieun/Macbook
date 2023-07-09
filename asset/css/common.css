@@ -11,9 +11,7 @@
 
 body{
     position: relative;
-    /* font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", 'sf-pro-display',"Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum", "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial",'Noto Sans KR', 'Malgun Gothic', sans-serif; */
-    font-family: "sf-pro-display","SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-serif; /* 궁서.고딕 */
-    /* line-height: 1.15; */
+    font-family: "sf-pro-display","SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-serif; 
     
     background-color: #1d1d1f;
     color: #f5f5f7;
@@ -35,9 +33,6 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 
 
 
-
-/* font-size */
-
 .headline-super{ font-size: 80px; line-height: 1.15; font-weight: 700; word-break: keep-all;}
 .headline-medium{ font-size: 56px; word-break: keep-all;}
 
@@ -47,16 +42,6 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 
 .title-normal{ font-size: 21px; font-weight: 500;margin-bottom: 0.4em;}
 
-/* 80* headline-super
-56* headline-medium
-
-32* desc-super
-28* desc-large
-19* desc-medium
-
-21* title-normal */
-
-/* layout */
 .common-inner1{ max-width: 980px; margin: 0 auto; }
 .common-inner2{ max-width: 1390px; padding: 0 24px; margin: 0 auto; }
 .inner1{
@@ -71,7 +56,6 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 .sc-header{padding-top: 41px;}
 
 
-/* common content */
 .section .content{
     border-radius: 30px;
     overflow: hidden;
@@ -88,7 +72,7 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
     display: flex;
     flex-direction: column;
 }
-.section .content-wrapper > * + *{margin-top: 24px;}/* gap을 안쓰고하는방법 */
+.section .content-wrapper > * + *{margin-top: 24px;}
 .section .content > .title{padding: 40px 40px 0;}
 .content .group-flex{ flex: 1;display: flex; align-items: center; }
 .section .content2 > .title{padding: 40px 40px 0;}
@@ -116,7 +100,6 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 .link-more::after{
     content: '';
     display: inline-block;
-    /* margin-left: 3px; */
     padding-left: 0.3em;
     top: -0.08em;
     text-decoration: none;
@@ -136,22 +119,15 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 
 
 @media screen and (max-width: 1068px) {
-    /* *1024을 기준으로 화면을 보고 잡아야함 */ 
-
-    /* .inner1{
-        max-width: 692px;
-    } */
     .inner1{padding: 43px 22px 84px;}
     .headline-super{font-size: 64px;}
     .section .content{min-height: 680px;}
     .desc-large{font-size: 24px;}
-    /* .common-inner2{padding: 0;} */
     .section .content2{min-height: 550px;}
     .common-inner1{padding: 0 22px;}
 }
 
 @media screen and (max-width: 833px) {
-    /* *768을보고 잡아야함 */
     .common-inner1{padding: 0 16px;}
     .inner0{
         padding: 0 16px;
@@ -164,7 +140,6 @@ button{font-family: "SFPro-KR-Display", "sf-pro-text", "sf-pro-icons", sans-seri
 }
 
 @media screen and (max-width: 767px) {
-    /* *320을 보고 잡아야함 */
     .common-inner1{padding: 0 16px; }
     .common-inner2{max-width: 400px;}
     .section .content > .title{

@@ -14,14 +14,12 @@ $(function(){
             $('.header-bottom .m-dimmed').removeClass('active');
 
         }
-    // alert(1);
 
     });
 
 
     
 
-// 검색 버튼을 누르면 나타나라
     $('.link-search').click(function(e){
         e.preventDefault();
         $('.dimmed, .header .nav-list').addClass('active');
@@ -56,7 +54,6 @@ $(function(){
         $('.search-area, .dimmed, .header .nav-list').removeClass('active');
     })
 
-    // dimmed클릭시 닫히기
     $('.dimmed').click(function(e){
         if( !$('.m-btn').has(e.target).length )
           $('.m-btn').removeClass('active');
@@ -66,7 +63,6 @@ $(function(){
 
 
 
-    // //////////////////....NAV영역.../////////////////
 
     $('.header-nav .nav-item').hover(function(){
         navHeight = $(this).find('.nav-wrap').outerHeight()
@@ -95,48 +91,36 @@ $(function(){
 
 
 
-
-    // battery 온종일 가는 배터리
     gsap.to('.content.battery .headline-super',{
-        // y:-180 픽셀
         scrollTrigger:{
             trigger:".content.battery .headline-super",
             start:"top 70%",
             end: "50% top",
             toggleClass:"add",
-            // markers:true,
-            // scrub:1,
-            once: true, //한번만
+            once: true,
         },
 
         
     })
 
-
-    // speed 속도 및 반응성
     gsap.to('.content.speed .speedOn',{
         scrollTrigger:{
             trigger:".speed",
             start:"50% 60%",
             end: "50% top",
-            // markers:true,
-            // scrub:1,
         },
 
         opacity: 1
     })
 
 
-    // 자물쇠
 
     const lock = gsap.timeline({
         scrollTrigger:{
             trigger:".content.security",
             start:"top 50%",
             end: "70% 70%",
-            // markers:true,//좌표
             scrub:1,
-            // pin:true
         },
         ease:'none'
     });
@@ -152,7 +136,6 @@ $(function(){
             trigger:".content.security",
             start:"20% 50%",
             end: "80% 50%",
-            // markers:true,
             scrub:1,
         },
     });
@@ -178,54 +161,39 @@ $(function(){
 
 
 
-    // .sc-display 노트북 채워지기
     gsap.to('.sc-display .img-area',{
-        // y:-180 픽셀
         scrollTrigger:{
             trigger:".sc-display .img-area",
             start:"top 75%",
             end: "20% top",
-            // markers:true,
-            // scrub:1,
         },
 
         opacity: 1
     })
 
 
-    // .sc-display 노트북 채워지기
     gsap.to('.sc-camera .camera-cam',{
-        // y:-180 픽셀
         scrollTrigger:{
             trigger:".camera-cam",
             start:"top 75%",
             end: "20% top",
-            // markers:true,
-            // scrub:1,
         },
 
         opacity: 1
     })
 
 
-    // .content.Tone .bg-area 색바뀌기
     gsap.to('.content.Tone .bg-area',{
-        // y:-180 픽셀
         scrollTrigger:{
             trigger:".content.Tone",
             start:"50% 75%",
             end: "50% top",
-            // markers:true,
-            // scrub:1,
-            // ease: 'ease-in',
             duration: 3,
         },
 
         opacity: 1
 })
 
-      
-    // .sc-recommend .chk-btn 색,이미지 바꾸기
     $('.notebook .chk-btn').click(function(e){
         e.preventDefault();
 
@@ -241,16 +209,13 @@ $(function(){
 
 
 
-    // 모바일영역
     $('.menu-btn.mobile-visible').click(function(e){
         e.preventDefault();
         e.stopPropagation();
-        // $('.menu-btn.mobile-visible').toggleClass('active');
         gsap.from('.header-bottom .m-menu .menu-item',{
             opacity: 0,
             yPercent:50,
             stagger:0.3,
-            // reversed:true
         })
         $('.header-bottom .m-box').slideToggle();
 
@@ -264,8 +229,6 @@ $(function(){
                 opacity: 0,
                 yPercent:50,
                 stagger:0.3,
-                // duration:2
-                // reversed:true
             })
         } else {
             $('.header-bottom .m-box, .m-menu').slideDown();
@@ -283,7 +246,6 @@ $(function(){
     })
 
     menu = gsap.from('.header .nav-area .menu-wrap .menu-item',{
-        // delay:1,
         opacity:0,
         yPercent:20,
         stagger:0.07,
@@ -305,8 +267,6 @@ $(function(){
             opacity: 1,
             visibility: 'visible',
             xPercent:0,
-            // transform: translateX(0),
-            // stagger:0.05,
         })
         
 
@@ -316,7 +276,6 @@ $(function(){
 
 
 
-    // footer 쇼핑및 알아보기
 
 
    $('.store-area .btn-open').click(function(e){
