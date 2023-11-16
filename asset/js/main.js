@@ -42,17 +42,19 @@ $(function(){
 
 
 
-    hdrNav = gsap.from('.nav-wrap .sub-list .sub-item',{
-        opacity:0,
-        yPercent:20,
-        stagger:0.01,
-        paused:true,
-    })
+    // hdrNav = gsap.from('.nav-wrap .sub-list .sub-item',{
+    //     opacity:0,
+    //     yPercent:20,
+    //     stagger:0.01,
+    //     duration: 0.6,
+    //     paused:true,
+    // })
 
     // 메뉴 높이값
     $('.header-nav .nav-item').hover(function(e){
         e.preventDefault();
-        hdrNav.restart(0.01);
+        // hdrNav.restart();
+        
         navHeight = $(this).find('.nav-wrap').outerHeight()
         $('.nav-wrap').removeClass('on');
         $(this).find('.nav-wrap').addClass('on');
@@ -66,6 +68,24 @@ $(function(){
         $('.dimmed').removeClass('active');
         $('.nav-wrap').removeClass('on');
     })
+    $('.nav-right').mouseleave(function(e){
+        e.preventDefault();
+        $('.header .nav-bg').css('height',0);
+        $('.dimmed').removeClass('active');
+        $('.search-area').removeClass('active');
+
+        if ($('.m-btn').hasClass('active')) {
+            $('.search-area').addClass('active');
+        }
+    })
+    // $('.m-btn').mouseleave(function(e){
+    //     e.preventDefault();
+
+    //     if ($('.m-btn').css('display', 'none')) {
+    //         $('.m-btn, .search-area').removeClass('active')
+    //     }
+    // })
+
     $('.dimmed').mouseover(function(e){
         e.preventDefault();
         $('.header .nav-bg').css('height',0);
@@ -256,6 +276,13 @@ $(function(){
         menu.restart()
     })
 
+    // $(window).resize(function() {
+    //     if($(window).width() > 1023) {
+    //     // window 크기가 768보다 작을때
+    //     ('.m-btn, .search-area').removeClass('active');
+    //     }
+    // });
+
 
 
    $('.store-area .btn-open').click(function(e){
@@ -272,5 +299,20 @@ $(function(){
 
    })
 
+
+   function searchRemove() {
+        if ($(window).width() > 1023) {
+            $('.search-area').removeClass('active'); 
+            // $('.dimmed').removeClass('active');
+        
+        }
+    }
+
+
+    $(window).on('resize', function() {
+        searchRemove(); 
+    });
+
+    searchRemove();
 
 });
